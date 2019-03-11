@@ -1,10 +1,13 @@
 <?php
-require_once '../projects/autoloader.php';
+require_once 'Zexarel/loader.php';
 
 ZRoute::get("/", function (){
-  echo "Questa è la route della homepage";
-}, "homepage");
+  redirect("home");
+});
 
+ZRoute::get("/home", function (){
+  echo "Questa è la route della homepage";
+}, "home");
 
 /*           CHIAMATE AJAX            */
 ZRoute::post("/show_my_profile", function (){

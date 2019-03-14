@@ -1,0 +1,21 @@
+PRIMA VOLTA CHE SI SCARICA
+nella cartella xampp/htdocs:
+tasto destro -> git bash here
+***********
+git clone https://github.com/EltarSilence/GeekChat
+***********
+OGNI VOLTA CHE SI VUOLE LAVORARE AL PROGETTO
+nella cartella del progetto:
+***********
+git fetch
+***********
+QUANDO SI VUOLE PUSHARE I FILE SUL SERVER
+nella cartella del progetto:
+***********
+git add .
+git commit -m "titolo della modifica"
+git push
+***********
+IN CASO DI CASINI -> git reset
+
+PS: se l'username non è già configurato seguire l'help di git

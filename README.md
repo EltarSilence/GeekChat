@@ -6,10 +6,11 @@ That's a school project which we decided to develop in order to learn leastways 
 ### Our DevTeam
 - EltarSilence
 - Zexal0807
-- Skil69
+- Canippa69Player
 - AlexMarchi2000
 - Levico69Player
 - KeiserLollo
+- Skil69
 
 ### Features
 

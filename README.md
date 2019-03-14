@@ -1,7 +1,8 @@
 # GeekChat
 *"A new implementation of messaging"*
+![alt text](https://i.gyazo.com/54fce636c642e3cc4168fcd014c0ee2e.png)
 
-That's a school project which we decided to develop in order to learn leastways something about web design and programming.
+GeekChat's a school project which we decided to develop in order to learn leastways something about web design and programming.
 
 ### Our DevTeam
 - EltarSilence

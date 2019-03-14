@@ -8,7 +8,8 @@ That's a school project which we decided to develop in order to learn leastways 
 - Zexal0807
 - Skil69
 - AlexMarchi2000
-- and 2 other
+- Levico69Player
+- and 1 other
 
 ### Features
 

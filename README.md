@@ -9,7 +9,7 @@ That's a school project which we decided to develop in order to learn leastways 
 - Skil69
 - AlexMarchi2000
 - Levico69Player
-- and 1 other
+- KeiserLollo
 
 ### Features
 
@@ -26,5 +26,7 @@ That's a school project which we decided to develop in order to learn leastways 
 	- Documents
 	- Geographic positions
 	- Polls
-
 - Other features are planned to be developed, enjoy.
+
+### Remarks
+- Website Colors: https://flatuicolors.com/palette/defo

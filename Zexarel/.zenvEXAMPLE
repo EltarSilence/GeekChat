@@ -1,0 +1,5 @@
+APP_NAME:zexarel
+APP_ROUTE:
+DB_HOST:localhost
+DB_USER:root
+DB_PASSWORD:

@@ -39,10 +39,10 @@ CREATE TABLE `audio` (
 -- --------------------------------------------------------
 
 --
--- Struttura della tabella `documento`
+-- Struttura della tabella `documenti`
 --
 
-CREATE TABLE `documento` (
+CREATE TABLE `documenti` (
   `id` int(11) NOT NULL,
   `url` varchar(200) NOT NULL,
   `idMessaggio` int(11) NOT NULL
@@ -51,10 +51,10 @@ CREATE TABLE `documento` (
 -- --------------------------------------------------------
 
 --
--- Struttura della tabella `immagine`
+-- Struttura della tabella `immagini`
 --
 
-CREATE TABLE `immagine` (
+CREATE TABLE `immagini` (
   `id` int(11) NOT NULL,
   `url` varchar(200) NOT NULL,
   `idMessaggio` int(11) NOT NULL
@@ -63,10 +63,10 @@ CREATE TABLE `immagine` (
 -- --------------------------------------------------------
 
 --
--- Struttura della tabella `link`
+-- Struttura della tabella `links`
 --
 
-CREATE TABLE `link` (
+CREATE TABLE `links` (
   `id` int(11) NOT NULL,
   `url` varchar(200) NOT NULL,
   `idMessaggio` int(11) NOT NULL
@@ -75,10 +75,10 @@ CREATE TABLE `link` (
 -- --------------------------------------------------------
 
 --
--- Struttura della tabella `messaggio`
+-- Struttura della tabella `messaggi`
 --
 
-CREATE TABLE `messaggio` (
+CREATE TABLE `messaggi` (
   `id` int(11) NOT NULL,
   `testo` varchar(2000) NOT NULL,
   `dataOraInvio` datetime NOT NULL,
@@ -89,10 +89,10 @@ CREATE TABLE `messaggio` (
 -- --------------------------------------------------------
 
 --
--- Struttura della tabella `posizione`
+-- Struttura della tabella `posizioni`
 --
 
-CREATE TABLE `posizione` (
+CREATE TABLE `posizioni` (
   `id` int(11) NOT NULL,
   `lat` float NOT NULL,
   `lon` float NOT NULL,
@@ -102,10 +102,10 @@ CREATE TABLE `posizione` (
 -- --------------------------------------------------------
 
 --
--- Struttura della tabella `risposta`
+-- Struttura della tabella `risposte`
 --
 
-CREATE TABLE `risposta` (
+CREATE TABLE `risposte` (
   `id` int(11) NOT NULL,
   `testo` varchar(50) NOT NULL,
   `idSondaggio` int(11) NOT NULL
@@ -114,10 +114,10 @@ CREATE TABLE `risposta` (
 -- --------------------------------------------------------
 
 --
--- Struttura della tabella `sondaggio`
+-- Struttura della tabella `sondaggi`
 --
 
-CREATE TABLE `sondaggio` (
+CREATE TABLE `sondaggi` (
   `id` int(11) NOT NULL,
   `quesito` varchar(50) NOT NULL,
   `idMessaggio` int(11) NOT NULL
@@ -126,10 +126,10 @@ CREATE TABLE `sondaggio` (
 -- --------------------------------------------------------
 
 --
--- Struttura della tabella `utente`
+-- Struttura della tabella `utenti`
 --
 
-CREATE TABLE `utente` (
+CREATE TABLE `utenti` (
   `id` int(11) NOT NULL,
   `username` varchar(50) NOT NULL,
   `isAdmin` tinyint(1) NOT NULL,
@@ -142,10 +142,10 @@ CREATE TABLE `utente` (
 -- --------------------------------------------------------
 
 --
--- Struttura della tabella `votazione`
+-- Struttura della tabella `votazioni`
 --
 
-CREATE TABLE `votazione` (
+CREATE TABLE `votazioni` (
   `id` int(11) NOT NULL,
   `dataOra` datetime NOT NULL,
   `idUtente` int(11) NOT NULL,
@@ -164,68 +164,67 @@ ALTER TABLE `audio`
   ADD KEY `idMessaggio` (`idMessaggio`);
 
 --
--- Indici per le tabelle `documento`
+-- Indici per le tabelle `documenti`
 --
-ALTER TABLE `documento`
-  ADD PRIMARY KEY (`id`),
-  ADD KEY `idMessaggio` (`idMessaggio`),
-  ADD KEY `idMessaggio_2` (`idMessaggio`);
-
---
--- Indici per le tabelle `immagine`
---
-ALTER TABLE `immagine`
+ALTER TABLE `documenti`
   ADD PRIMARY KEY (`id`),
   ADD KEY `idMessaggio` (`idMessaggio`);
 
 --
--- Indici per le tabelle `link`
+-- Indici per le tabelle `immagini`
 --
-ALTER TABLE `link`
+ALTER TABLE `immagini`
   ADD PRIMARY KEY (`id`),
   ADD KEY `idMessaggio` (`idMessaggio`);
 
 --
--- Indici per le tabelle `messaggio`
+-- Indici per le tabelle `links`
 --
-ALTER TABLE `messaggio`
+ALTER TABLE `links`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `idMessaggio` (`idMessaggio`);
+
+--
+-- Indici per le tabelle `messaggi`
+--
+ALTER TABLE `messaggi`
   ADD PRIMARY KEY (`id`),
   ADD KEY `idUtente` (`idUtente`),
   ADD KEY `idReply` (`idReply`);
 
 --
--- Indici per le tabelle `posizione`
+-- Indici per le tabelle `posizioni`
 --
-ALTER TABLE `posizione`
+ALTER TABLE `posizioni`
   ADD PRIMARY KEY (`id`),
   ADD KEY `idMessaggio` (`idMessaggio`);
 
 --
--- Indici per le tabelle `risposta`
+-- Indici per le tabelle `risposte`
 --
-ALTER TABLE `risposta`
+ALTER TABLE `risposte`
   ADD PRIMARY KEY (`id`),
   ADD KEY `idSondaggio` (`idSondaggio`);
 
 --
--- Indici per le tabelle `sondaggio`
+-- Indici per le tabelle `sondaggi`
 --
-ALTER TABLE `sondaggio`
+ALTER TABLE `sondaggi`
   ADD PRIMARY KEY (`id`),
   ADD KEY `idMessaggio` (`idMessaggio`);
 
 --
--- Indici per le tabelle `utente`
+-- Indici per le tabelle `utenti`
 --
-ALTER TABLE `utente`
+ALTER TABLE `utenti`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indici per le tabelle `votazione`
+-- Indici per le tabelle `votazioni`
 --
-ALTER TABLE `votazione`
+ALTER TABLE `votazioni`
   ADD PRIMARY KEY (`id`),
-  ADD KEY `idUtente` (`idUtente`,`idRisposta`),
+  ADD KEY `idUtente` (`idUtente`),
   ADD KEY `idRisposta` (`idRisposta`);
 
 --
@@ -238,49 +237,49 @@ ALTER TABLE `votazione`
 ALTER TABLE `audio`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 --
--- AUTO_INCREMENT per la tabella `documento`
+-- AUTO_INCREMENT per la tabella `documenti`
 --
-ALTER TABLE `documento`
+ALTER TABLE `documenti`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 --
--- AUTO_INCREMENT per la tabella `immagine`
+-- AUTO_INCREMENT per la tabella `immagini`
 --
-ALTER TABLE `immagine`
+ALTER TABLE `immagini`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 --
--- AUTO_INCREMENT per la tabella `link`
+-- AUTO_INCREMENT per la tabella `links`
 --
-ALTER TABLE `link`
+ALTER TABLE `links`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 --
--- AUTO_INCREMENT per la tabella `messaggio`
+-- AUTO_INCREMENT per la tabella `messaggi`
 --
-ALTER TABLE `messaggio`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
---
--- AUTO_INCREMENT per la tabella `posizione`
---
-ALTER TABLE `posizione`
+ALTER TABLE `messaggi`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 --
--- AUTO_INCREMENT per la tabella `risposta`
+-- AUTO_INCREMENT per la tabella `posizioni`
 --
-ALTER TABLE `risposta`
+ALTER TABLE `posizioni`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 --
--- AUTO_INCREMENT per la tabella `sondaggio`
+-- AUTO_INCREMENT per la tabella `risposte`
 --
-ALTER TABLE `sondaggio`
+ALTER TABLE `risposte`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 --
--- AUTO_INCREMENT per la tabella `utente`
+-- AUTO_INCREMENT per la tabella `sondaggi`
 --
-ALTER TABLE `utente`
+ALTER TABLE `sondaggi`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 --
--- AUTO_INCREMENT per la tabella `votazione`
+-- AUTO_INCREMENT per la tabella `utenti`
 --
-ALTER TABLE `votazione`
+ALTER TABLE `utenti`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+--
+-- AUTO_INCREMENT per la tabella `votazioni`
+--
+ALTER TABLE `votazioni`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 --
 -- Limiti per le tabelle scaricate
@@ -290,57 +289,57 @@ ALTER TABLE `votazione`
 -- Limiti per la tabella `audio`
 --
 ALTER TABLE `audio`
-  ADD CONSTRAINT `audio_ibfk_1` FOREIGN KEY (`idMessaggio`) REFERENCES `messaggio` (`id`);
+  ADD CONSTRAINT `audio_ibfk_1` FOREIGN KEY (`idMessaggio`) REFERENCES `messaggi` (`id`);
 
 --
--- Limiti per la tabella `documento`
+-- Limiti per la tabella `documenti`
 --
-ALTER TABLE `documento`
-  ADD CONSTRAINT `documento_ibfk_1` FOREIGN KEY (`idMessaggio`) REFERENCES `messaggio` (`id`);
+ALTER TABLE `documenti`
+  ADD CONSTRAINT `documenti_ibfk_1` FOREIGN KEY (`idMessaggio`) REFERENCES `messaggi` (`id`);
 
 --
--- Limiti per la tabella `immagine`
+-- Limiti per la tabella `immagini`
 --
-ALTER TABLE `immagine`
-  ADD CONSTRAINT `immagine_ibfk_1` FOREIGN KEY (`idMessaggio`) REFERENCES `messaggio` (`id`);
+ALTER TABLE `immagini`
+  ADD CONSTRAINT `immagini_ibfk_1` FOREIGN KEY (`idMessaggio`) REFERENCES `messaggi` (`id`);
 
 --
--- Limiti per la tabella `link`
+-- Limiti per la tabella `links`
 --
-ALTER TABLE `link`
-  ADD CONSTRAINT `link_ibfk_1` FOREIGN KEY (`idMessaggio`) REFERENCES `messaggio` (`id`);
+ALTER TABLE `links`
+  ADD CONSTRAINT `links_ibfk_1` FOREIGN KEY (`idMessaggio`) REFERENCES `messaggi` (`id`);
 
 --
--- Limiti per la tabella `messaggio`
+-- Limiti per la tabella `messaggi`
 --
-ALTER TABLE `messaggio`
-  ADD CONSTRAINT `messaggio_ibfk_1` FOREIGN KEY (`idUtente`) REFERENCES `utente` (`id`),
-  ADD CONSTRAINT `messaggio_ibfk_2` FOREIGN KEY (`idReply`) REFERENCES `messaggio` (`id`);
+ALTER TABLE `messaggi`
+  ADD CONSTRAINT `messaggi_ibfk_1` FOREIGN KEY (`idUtente`) REFERENCES `utenti` (`id`),
+  ADD CONSTRAINT `messaggi_ibfk_2` FOREIGN KEY (`idReply`) REFERENCES `messaggi` (`id`);
 
 --
--- Limiti per la tabella `posizione`
+-- Limiti per la tabella `posizioni`
 --
-ALTER TABLE `posizione`
-  ADD CONSTRAINT `posizione_ibfk_1` FOREIGN KEY (`idMessaggio`) REFERENCES `messaggio` (`id`);
+ALTER TABLE `posizioni`
+  ADD CONSTRAINT `posizioni_ibfk_1` FOREIGN KEY (`idMessaggio`) REFERENCES `messaggi` (`id`);
 
 --
--- Limiti per la tabella `risposta`
+-- Limiti per la tabella `risposte`
 --
-ALTER TABLE `risposta`
-  ADD CONSTRAINT `risposta_ibfk_1` FOREIGN KEY (`idSondaggio`) REFERENCES `sondaggio` (`id`);
+ALTER TABLE `risposte`
+  ADD CONSTRAINT `risposte_ibfk_1` FOREIGN KEY (`idSondaggio`) REFERENCES `sondaggi` (`id`);
 
 --
--- Limiti per la tabella `sondaggio`
+-- Limiti per la tabella `sondaggi`
 --
-ALTER TABLE `sondaggio`
-  ADD CONSTRAINT `sondaggio_ibfk_1` FOREIGN KEY (`idMessaggio`) REFERENCES `messaggio` (`id`);
+ALTER TABLE `sondaggi`
+  ADD CONSTRAINT `sondaggi_ibfk_1` FOREIGN KEY (`idMessaggio`) REFERENCES `messaggi` (`id`);
 
 --
--- Limiti per la tabella `votazione`
+-- Limiti per la tabella `votazioni`
 --
-ALTER TABLE `votazione`
-  ADD CONSTRAINT `votazione_ibfk_1` FOREIGN KEY (`idUtente`) REFERENCES `utente` (`id`),
-  ADD CONSTRAINT `votazione_ibfk_2` FOREIGN KEY (`idRisposta`) REFERENCES `risposta` (`id`);
+ALTER TABLE `votazioni`
+  ADD CONSTRAINT `votazioni_ibfk_1` FOREIGN KEY (`idUtente`) REFERENCES `utenti` (`id`),
+  ADD CONSTRAINT `votazioni_ibfk_2` FOREIGN KEY (`idRisposta`) REFERENCES `risposte` (`id`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

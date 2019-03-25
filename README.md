@@ -10,7 +10,7 @@ GeekChat's a school project which we decided to develop in order to learn leastw
 - Canippa69Player
 - AlexMarchi2000
 - Levico69Player
-- KeiserLollo
+- Lorenz1999
 - Skil69
 
 ### Features

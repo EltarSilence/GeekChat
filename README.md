@@ -1,6 +1,6 @@
 # GeekChat
 *"A new implementation of messaging"*
-![alt text](https://i.gyazo.com/54fce636c642e3cc4168fcd014c0ee2e.png)
+![Logo](https://i.gyazo.com/bc51348de597442286dfd041b6f9ba3a.png)
 
 GeekChat's a school project which we decided to develop in order to learn leastways something about web design and programming.
 

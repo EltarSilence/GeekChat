@@ -27,7 +27,10 @@ class Controller{
   }
 
   /*
-  Funzione per settare il nuovo username
+    Funzione per settare il nuovo username
+    @input
+      id    -> id dell'utente
+      new   -> nuovo username
   */
   public static function editUsername($id, $new){
     $DB =  new Database();

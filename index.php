@@ -14,9 +14,21 @@ ZRoute::post("/show_my_profile", function (){
   //Qui ci va lo script che deve essere esguito quando si fa una chiamata AJAX per mostrare il mio profilo
 }, "my_profile");
 
-/*Chiamata per settare un nuovo username*/
+/*
+  Chiamata per settare un nuovo username
+  @input:
+    username  ->  Nuovo username
+*/
 ZRoute::post("/edit_username", function($data){
-
+  if(isset($data['username'], $_SESSION['id'])){
+    if(Controller::editUsername($_SESSION['id'], $data['username'])){
+      die();
+    }
+    http_responce_code(500);
+    die();
+  }
+  http_responce_code(500);
+  die();
 }, "edit_username");
 
 

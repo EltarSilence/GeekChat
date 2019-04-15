@@ -26,4 +26,18 @@ class Controller{
   	echo json_encode($j);
   }
 
+  /*
+  Funzione per settare il nuovo username
+  */
+  public static function editUsername($id, $new){
+    $DB =  new Database();
+    $ret = $DB->update("utenti")
+      ->set("username", $new)
+      ->where("id", "=", $id)
+      ->getSQL();
+      echo $ret;
+      //->execute();
+    return boolval($ret);
+  }
+
 }

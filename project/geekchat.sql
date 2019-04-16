@@ -21,7 +21,7 @@ SET time_zone = "+00:00";
 --
 -- Database: `geekchat`
 --
-CREATE DATABASE IF NOT EXISTS `geekchat` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci;
+CREATE DATABASE IF NOT EXISTS `geekchat` DEFAULT CHARACTER SET utf8;
 USE `geekchat`;
 
 -- --------------------------------------------------------
@@ -34,7 +34,7 @@ CREATE TABLE `audio` (
   `id` int(11) NOT NULL,
   `url` varchar(200) NOT NULL,
   `idMessaggio` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -46,7 +46,7 @@ CREATE TABLE `documenti` (
   `id` int(11) NOT NULL,
   `url` varchar(200) NOT NULL,
   `idMessaggio` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -58,7 +58,7 @@ CREATE TABLE `immagini` (
   `id` int(11) NOT NULL,
   `url` varchar(200) NOT NULL,
   `idMessaggio` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -70,7 +70,7 @@ CREATE TABLE `links` (
   `id` int(11) NOT NULL,
   `url` varchar(200) NOT NULL,
   `idMessaggio` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -84,7 +84,7 @@ CREATE TABLE `messaggi` (
   `dataOraInvio` datetime NOT NULL,
   `idReply` int(11) DEFAULT NULL,
   `idUtente` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -97,7 +97,7 @@ CREATE TABLE `posizioni` (
   `lat` float NOT NULL,
   `lon` float NOT NULL,
   `idMessaggio` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -109,7 +109,7 @@ CREATE TABLE `risposte` (
   `id` int(11) NOT NULL,
   `testo` varchar(50) NOT NULL,
   `idSondaggio` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -121,7 +121,7 @@ CREATE TABLE `sondaggi` (
   `id` int(11) NOT NULL,
   `quesito` varchar(50) NOT NULL,
   `idMessaggio` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -137,7 +137,7 @@ CREATE TABLE `utenti` (
   `immagine` varchar(150) DEFAULT NULL,
   `password` varchar(30) NOT NULL,
   `lastAccess` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -150,7 +150,7 @@ CREATE TABLE `votazioni` (
   `dataOra` datetime NOT NULL,
   `idUtente` int(11) NOT NULL,
   `idRisposta` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Indici per le tabelle scaricate

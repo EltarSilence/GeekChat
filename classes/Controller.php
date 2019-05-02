@@ -46,4 +46,22 @@ class Controller{
     return boolval($ret);*/
   }
 
+  /*
+    Funzione per settare la nuova descrizione
+    @input
+      id    -> id dell'utente
+      new   -> nuova descrizione
+  */
+  public static function editDescrizione($id, $new){
+    /*$DB =  new Database();
+    $ret = $DB->update("utenti")
+      ->set("desc", $new)
+      ->where("id", "=", $id)
+      ->getSQL();
+      echo $ret;
+      //->execute();
+    return boolval($ret);*/
+  }
+
+
 }

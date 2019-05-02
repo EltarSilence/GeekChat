@@ -31,6 +31,22 @@ ZRoute::post("/edit_username", function($data){
   die();
 }, "edit_username");
 
+/*
+  Chiamata per settare un nuova descrizione
+  @input:
+    desc  ->  Nuova descrizione
+*/
+ZRoute::post("/edit_descrizione", function($data){
+  if(isset($data['desc'], $_SESSION['id'])){
+    if(Controller::editDescrizione($_SESSION['id'], $data['desc'])){
+      die();
+    }
+    http_responce_code(500);
+    die();
+  }
+  http_responce_code(500);
+  die();
+}, "edit_descrizione");
 
 
 ZRoute::listen();

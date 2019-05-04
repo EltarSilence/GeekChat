@@ -1,6 +1,13 @@
 APP_NAME:GeekChat
+
 DB_HOST:localhost
 DB_USER:root
 DB_PASSWORD:
 DB_DATABASE:geekchat
+
+SESSION_ENABLE:false
+
 LOG_DIRECTORY:logs
+
+KERNEL_ENABLE:true
+KERNEL_WRITE_LOG:true

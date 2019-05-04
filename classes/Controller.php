@@ -41,14 +41,17 @@ class Controller{
       new   -> nuovo username
   */
   public static function editUsername($id, $new){
-    /*$DB =  new Database();
-    $ret = $DB->update("utenti")
-      ->set("username", $new)
-      ->where("id", "=", $id)
-      ->getSQL();
-      echo $ret;
-      //->execute();
-    return boolval($ret);*/
+    $DB = new mysqli(
+      ZConfig:config("DB_HOST", "localhost"),
+      ZConfig:config("DB_USER", "root"),
+      ZConfig:config("DB_PASSWORD", ""),
+      ZConfig:config("DB_DATABASE", "geekchat")
+    );
+    if($DB->connect_errno){
+      die();
+    }
+    $ret = $DB->query("UPDATE utenti SET username = '".$new."' WHERE id = ".$id);
+    return boolval($ret);
   }
 
   /*

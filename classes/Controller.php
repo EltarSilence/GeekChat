@@ -3,7 +3,12 @@ class Controller{
   public static function getProfile($id){
   	$j = array();            //array associativo di risposta
   	if (isset($id) && !empty($id)){
-      $mysqli = new mysqli("localhost", "root", "", "geekchat");
+      $mysqli = new mysqli(
+        ZConfig:config("DB_HOST", "localhost"),
+        ZConfig:config("DB_USER", "root"),
+        ZConfig:config("DB_PASSWORD", ""),
+        ZConfig:config("DB_DATABASE", "geekchat")
+      );
       if($mysqli->connect_errno){
       	die();
       }

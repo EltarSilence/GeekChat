@@ -1,8 +1,8 @@
 <?php
 class Controller{
   public static function getProfile($id){
-  	$j = array();            //array associativo di risposta
-  	if (isset($id) && !empty($id)){
+  	$j = [];            //array associativo di risposta
+  	if(isset($id) && !empty($id)){
       $mysqli = new mysqli(
         ZConfig:config("DB_HOST", "localhost"),
         ZConfig:config("DB_USER", "root"),

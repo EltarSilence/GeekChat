@@ -1,18 +1,18 @@
 <div class="col-12 mr-0 ml-0 row">
   <div class="col-1">
-    //img
+    <img class="" src="{{ $this->immagine }}" />
   </div>
   <div class="col-10">
     <div class="row">
       <div class="col-6">
-        {{ $this->cognome . " " . $this->nome }}
+        {{ $cognome }} {{ $nome }}
       </div>
       <div class="col-6">
-        {{ $this->username }}
+        @{{ $username }}
       </div>
     </div>
     <div class="col-12">
-      {{ $this->biografia }}
+      {{ $biografia }}
     </div>
   </div>
   <div class="col-1">

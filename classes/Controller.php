@@ -4,10 +4,10 @@ class Controller{
   	$j = [];            //array associativo di risposta
   	if(isset($id) && !empty($id)){
       $mysqli = new mysqli(
-        ZConfig:config("DB_HOST", "localhost"),
-        ZConfig:config("DB_USER", "root"),
-        ZConfig:config("DB_PASSWORD", ""),
-        ZConfig:config("DB_DATABASE", "geekchat")
+        ZConfig::config("DB_HOST", "localhost"),
+        ZConfig::config("DB_USER", "root"),
+        ZConfig::config("DB_PASSWORD", ""),
+        ZConfig::config("DB_DATABASE", "geekchat")
       );
       if($mysqli->connect_errno){
       	die();
@@ -41,11 +41,11 @@ class Controller{
       new   -> nuovo username
   */
   public static function editUsername($id, $new){
-    $DB = new mysqli(
-      ZConfig:config("DB_HOST", "localhost"),
-      ZConfig:config("DB_USER", "root"),
-      ZConfig:config("DB_PASSWORD", ""),
-      ZConfig:config("DB_DATABASE", "geekchat")
+    $mysqli = new mysqli(
+      ZConfig::config("DB_HOST", "localhost"),
+      ZConfig::config("DB_USER", "root"),
+      ZConfig::config("DB_PASSWORD", ""),
+      ZConfig::config("DB_DATABASE", "geekchat")
     );
     if($DB->connect_errno){
       die();

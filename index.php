@@ -1,7 +1,7 @@
 <?php
 require_once 'Zexarel/loader.php';
 
-require_once 'classes/Controller.php'
+require_once 'classes/Controller.php';
 
 ZRoute::get("/", function (){
   redirect("home");

@@ -1,4 +1,7 @@
+
 # GeekChat
+![](https://img.shields.io/github/languages/code-size/eltarsilence/GeekChat.svg) ![](https://img.shields.io/badge/system-PHP/MySQL_DB-yellow.svg)  ![](https://img.shields.io/badge/project-School-green.svg) ![](https://img.shields.io/github/issues/eltarsilence/GeekChat.svg) ![](https://img.shields.io/badge/php-7_>-blue.svg) ![](https://img.shields.io/badge/collaborators-7-blueviolet.svg)
+
 *"A new implementation of messaging"*
 ![Logo](https://i.gyazo.com/bc51348de597442286dfd041b6f9ba3a.png)
 
@@ -28,7 +31,6 @@ GeekChat's a school project which we decided to develop in order to learn leastw
 	- Documents
 	- Geographic positions
 	- Polls
-- Other features are planned to be developed, enjoy.
 
 ### Remarks
 - Website Colors: https://flatuicolors.com/palette/defo

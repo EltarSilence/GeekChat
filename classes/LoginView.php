@@ -1,6 +1,5 @@
 <?php
-class View extends ZView{
+class AppView extends ZView{
   public static $dir = '../view/';
-  public static $app = "login.html";
+  public static $appFile = "../app.html";
 }
-?>

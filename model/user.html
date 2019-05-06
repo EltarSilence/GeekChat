@@ -16,6 +16,9 @@
     </div>
   </div>
   <div class="col-1">
-    <span class="dot dot-open" data-toggle="tooltip" title="" data-placement="left" data-original-title="Aperta"></span>
+    @if($online)
+    <span class="dot dot-green" data-toggle="tooltip" data-placement="left" data-original-title="Online"></span>
+    @else
+    <span class="dot dot-red" data-toggle="tooltip" data-placement="left" data-original-title="Offline"></span>
   </div>
 </div>

@@ -1,6 +1,6 @@
 <?php
 class TextMessage extends ZModel{
-  public $dir = "../model/";
+  public $dir = "assets/model/";
   public $model = "TextMessage";
 
   private $sender;

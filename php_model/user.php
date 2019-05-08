@@ -1,6 +1,6 @@
 <?php
 class User extends ZModel{
-  public $dir = "model/";
+  public $dir = "assets/model/";
   public $name = "user";
 }
 ?>

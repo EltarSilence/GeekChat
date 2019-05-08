@@ -1,9 +1,9 @@
 <?php
 require_once 'Zexarel/loader.php';
 
-require_once 'classes/AppView.php';
-require_once 'classes/Controller.php';
-require_once 'php_model/user.php';
+require_once 'server/view/AppView.php';
+require_once 'server/controller/Controller.php';
+require_once 'server/model/user.php';
 
 ZRoute::get("/", function (){
   redirect("chat");

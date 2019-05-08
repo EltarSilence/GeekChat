@@ -61,14 +61,17 @@ class Controller{
       new   -> nuova descrizione
   */
   public static function editDescrizione($id, $new){
-    /*$DB =  new Database();
-    $ret = $DB->update("utenti")
-      ->set("desc", $new)
-      ->where("id", "=", $id)
-      ->getSQL();
-      echo $ret;
-      //->execute();
-    return boolval($ret);*/
+    $mysqli = new mysqli(
+      ZConfig::config("DB_HOST", "localhost"),
+      ZConfig::config("DB_USER", "root"),
+      ZConfig::config("DB_PASSWORD", ""),
+      ZConfig::config("DB_DATABASE", "geekchat")
+    );
+    if($DB->connect_errno){
+      die();
+    }
+    $ret = $DB->query("UPDATE utenti SET bio = '".$new."' WHERE id = ".$id);
+    return boolval($ret);
   }
 
 

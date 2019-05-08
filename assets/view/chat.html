@@ -1,0 +1,27 @@
+@content
+<div class="container-fluid">
+  <div class="row myrow">
+    @yield('_nav')
+  </div>
+  <div class="row">
+    <div class="col-4">
+      {{{ $u = new User(["nome"=>"Roberto", "cognome"=>"Gallina", "username"=>"Zexal0807", "biografia"=>"Questa è la bio"]) }}}
+      {{ $u->getHtml() }}
+    </div>
+    <div class="col-8">
+      <div class="container-fluid">
+        @yield('_chat')
+      </div>
+      @yield('_messageBar')
+    </div>
+  </div>
+</div>
+@endcontent
+
+@css
+<link rel="stylesheet" href="assets/css/user.css"/>
+@endcss
+
+@js
+<script src="assets/js/user.js" charset="utf-8"></script>
+@endjs

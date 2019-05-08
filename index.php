@@ -6,12 +6,12 @@ require_once 'classes/Controller.php';
 require_once 'php_model/user.php';
 
 ZRoute::get("/", function (){
-  redirect("home");
+  redirect("chat");
 });
 
-ZRoute::get("/home", function (){
-  AppView::get("home");
-}, "home");
+ZRoute::get("/chat", function (){
+  AppView::get("chat");
+}, "chat");
 
 /*           CHIAMATE AJAX            */
 ZRoute::post("/show_my_profile", function (){

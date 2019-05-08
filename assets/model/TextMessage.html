@@ -10,63 +10,41 @@
   </head>
   <body>
   <style>
+    .mess{
+        background-color: #435f7a;
+        border-radius: 20px;
+        padding: 10px 20px;
+        box-shadow: 0 0 15px 0 #000000;
+        }
     .sender{
-      border: 1px solid black;
-      background: ;
-      border-radius: 7px 7px 0px 0px;
-    }
-    .mycol{
-      border: 1px solid black;
-    }
-
-    .sent_msg{
-        background: #0465ac;
-        border-radius: 12px 15px 15px 0;
-        font-size: 14px;
-        margin: 0;
-        color: #fff;
-        padding: 5px 10px 5px 12px;
-        width: 100%;
+          color: #9ACD32;
+          font-size: medium;
       }
-
-    .mycont{
-      border-radius: 7px 7px 0px 7px;
-      border: 1px solid DarkGrey;
-      background: linear-gradient(to bottom, Gray, DarkGrey);
-      color: black;
+    .testo{
+        color: #ffffff;
     }
     .imgbin{
-      max-width: 20%;
-      float:right;
-      height: auto;
-    }
-    .imgbin:hover{
+          max-width: 30px;
+          height: auto;
+      }
+      .imgbin:hover{
       box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
       filter: invert(100%);
     }
   </style>
-    <div class="container">
-          <div class="row sent_msg">
-            <div class="col-10">
-              Sender: {{ $this->sender }}
+    <div class="container mess">
+          <div class="row">
+            <div class="col-10 sender">
+              Alex Marchi
             </div>
             <div class="col-2">
               <img src="bin.png" class="imgbin">
               <img src="send.png" class="imgbin">
             </div>
           </div>
-          <div class="row">
-            Testo: {{ $this->text }}
+          <div class="row testo">
+              Lorem Ipsum è un testo segnaposto utilizzato nel settore della tipografia e della stampa. Lorem Ipsum è considerato il testo segnaposto standard sin dal sedicesimo secolo, quando un anonimo tipografo prese una cassetta di caratteri e li assemblò per preparare un testo campione. È sopravvissuto non solo a più di cinque secoli, ma anche al passaggio alla videoimpaginazione, pervenendoci sostanzialmente inalterato. Fu reso popolare, negli anni ’60, con la diffusione dei fogli di caratteri trasferibili “Letraset”, che contenevano passaggi del Lorem Ipsum, e più recentemente da software di impaginazione come Aldus PageMaker, che includeva versioni del Lorem Ipsum.
           </div>
         </div>
   </body>
 </html>
-
-<!--
-<div>
-  <div>{{ $this->sender }}</div>
-  <div class="text">
-    {{ $this->text }}
-  </div>
-</div>
--->

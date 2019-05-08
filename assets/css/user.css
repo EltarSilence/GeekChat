@@ -4,11 +4,17 @@
 .user:hover{
   background-color: #b7dbe8;
 }
-.content-dot {
+.content-center {
   flex-direction: column;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.img-user{
+  width: 60%;
+  border-radius: 100%;
+  border: 1px solid #ccc;
+  box-shadow: 1px 1px 5px black;
 }
 .dot{
   width: 20px;

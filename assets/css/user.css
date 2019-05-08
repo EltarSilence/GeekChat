@@ -1,0 +1,12 @@
+.dot {
+  width: 30%;
+  margin: 0 35%;
+  border-radius: 50%;
+  display: inline-block;
+}
+.dot-green {
+  background-color: green;
+}
+.dot-red {
+  background-color: red;
+}

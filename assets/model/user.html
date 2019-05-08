@@ -1,25 +1,32 @@
-<div class="col-12 mr-0 ml-0 row">
-  <div class="col-1">
+<div class="col-12 mr-0 ml-0 row border">
+  <div class="col-1 border">
     <img src="{{ $immagine }}" />
   </div>
-  <div class="col-10">
+  <div class="col-10 border">
     <div class="row">
-      <div class="col-6">
+      <div class="col-6 border">
         {{ $cognome }} {{ $nome }}
       </div>
-      <div class="col-6">
+      <div class="col-6 text-right border">
         @{{ $username }}
       </div>
     </div>
-    <div class="col-12">
+    <div class="col-12 border">
       {{ $biografia }}
     </div>
   </div>
-  <div class="col-1">
+  <div class="col-1 border">
     @if($online)
-    <span class="dot dot-green" data-toggle="tooltip" data-placement="left" data-original-title="Online"></span>
+    <span class="dot dot-green" data-toggle="tooltip" data-placement="right" data-original-title="Online"></span>
     @else
-    <span class="dot dot-red" data-toggle="tooltip" data-placement="left" data-original-title="Offline"></span>
+    <span class="dot dot-red" data-toggle="tooltip" data-placement="right" data-original-title="Offline"></span>
     @endif
+    <script type="text/javascript">
+      $(document).ready(function(){
+        $(function () {
+          $('[data-toggle="tooltip"]').tooltip()
+        });
+      });
+    </script>
   </div>
 </div>

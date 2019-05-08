@@ -1,32 +1,27 @@
-<div class="col-12 mr-0 ml-0 row border">
-  <div class="col-1 border">
-    <img src="{{ $immagine }}" />
-  </div>
-  <div class="col-10 border">
-    <div class="row">
-      <div class="col-6 border">
-        {{ $cognome }} {{ $nome }}
+<a class="card user">
+  <div class="col-12 mr-0 ml-0 pl-0 pr-0 row">
+    <div class="col-2 pl-0 pr-0">
+      <img src="{{ $immagine }}" />
+    </div>
+    <div class="col-9 pl-0 pr-0">
+      <div class="row mr-0 ml-0">
+        <div class="col-6">
+          <b>{{ $cognome }} {{ $nome }}</b>
+        </div>
+        <div class="col-6 text-right">
+          @<b>{{ $username }}</b>
+        </div>
       </div>
-      <div class="col-6 text-right border">
-        @{{ $username }}
+      <div class="col-12 ml-0 mr-0">
+        {{ $biografia }}
       </div>
     </div>
-    <div class="col-12 border">
-      {{ $biografia }}
+    <div class="col-1 pl-0 pr-0 content-dot">
+      @if($online)
+      <span class="dot-green" data-toggle="tooltip" data-placement="right" data-original-title="Online"></span>
+      @else
+      <span class="dot dot-red" data-toggle="tooltip" data-placement="right" data-original-title="Offline"></span>
+      @endif
     </div>
   </div>
-  <div class="col-1 border">
-    @if($online)
-    <span class="dot dot-green" data-toggle="tooltip" data-placement="right" data-original-title="Online"></span>
-    @else
-    <span class="dot dot-red" data-toggle="tooltip" data-placement="right" data-original-title="Offline"></span>
-    @endif
-    <script type="text/javascript">
-      $(document).ready(function(){
-        $(function () {
-          $('[data-toggle="tooltip"]').tooltip()
-        });
-      });
-    </script>
-  </div>
-</div>
+</a>

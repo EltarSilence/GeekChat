@@ -9,6 +9,7 @@ function ajax_getOnlineUser(){
     data : {},
     success : function(data){
       $('#users').html(data);
+      $("div[id^=tooltip]").remove();
       $(function(){
         $('[data-toggle="tooltip"]').tooltip()
       });

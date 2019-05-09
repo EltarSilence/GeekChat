@@ -3,16 +3,11 @@
     <div class="col-2 pl-0 pr-0 content-center">
       <img class="img-fluid img-user mb-1 mt-1" src="assets/model/bin.png{{ $immagine }}" />
     </div>
-    <div class="col-9 pl-0 pr-0">
-      <div class="row mr-0 ml-0">
-        <div class="col-6">
-          <b>{{ $cognome }} {{ $nome }}</b>
-        </div>
-        <div class="col-6 text-right">
-          @<b>{{ $username }}</b>
-        </div>
+    <div class="col-9 pl-0 pr-0 content-center">
+      <div class="w-100 text-left">
+        @<b>{{ $username }}</b>
       </div>
-      <div class="col-12 ml-0 mr-0">
+      <div class="w-100 text-left">
         {{ $biografia }}
       </div>
     </div>

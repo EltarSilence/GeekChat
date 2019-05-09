@@ -7,14 +7,18 @@
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
   </head>
   <body>
   <style>
+    .icon{
+        
+      }
     .mess{
         background-color: #435f7a;
         border-radius: 20px;
         padding: 10px 20px;
-        box-shadow: 0 0 15px 0 #000000;
+        box-shadow: 0 0 10px 0 #000000;
         }
     .sender{
           color: #9ACD32;
@@ -28,8 +32,8 @@
           height: auto;
       }
       .imgbin:hover{
-      box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
-      filter: invert(100%);
+        transition: 0.6s ease;
+        filter: invert(100%);
     }
   </style>
     <div class="container mess">
@@ -37,9 +41,11 @@
             <div class="col-10 sender">
               Alex Marchi
             </div>
-            <div class="col-2">
-              <img src="bin.png" class="imgbin">
-              <img src="send.png" class="imgbin">
+            <div class="col-2 icon">
+                <span class="icon-reply imgbin">
+                </span>
+                <span class="icon-trash imgbin">
+                </span>
             </div>
           </div>
           <div class="row testo">

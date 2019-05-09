@@ -133,7 +133,7 @@ CREATE TABLE `utenti` (
   `id` int(11) NOT NULL,
   `username` varchar(50) NOT NULL,
   `isAdmin` tinyint(1) NOT NULL,
-  `bio` varchar(50) NOT NULL,
+  `bio` varchar(200) NOT NULL,
   `immagine` varchar(150) DEFAULT NULL,
   `password` varchar(30) NOT NULL,
   `lastAccess` datetime NOT NULL

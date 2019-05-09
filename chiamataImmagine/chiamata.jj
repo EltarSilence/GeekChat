@@ -1,0 +1,20 @@
+function richiesta(){
+    /*
+    mi aspetto che ricevo in input il caricamento dell'immagine nuova
+    e dovrò aggiornare il link dell'immagine sostituendo il link nuovo,
+    dovrà anche cambiare l'immagine nel database
+    */
+    var xhttp = new XMLHttpRequest();
+    xhttp.open("GET","prova.php" ,true); 
+    xhttp.onreadystatechange=function(){
+        if(this.readyState==4 && this.status == 200){
+            var testo="";
+            var obJson =JSON.parse(xhttp.responseText);
+            for (var i=0 ; i<obJson.length; i++){
+            testo = testo + "immagine: " +obJson[i].immagine +"<br>";
+        }
+        }
+        document.getElementById("prova").innerHTML = testo;
+    };
+    xhttp.send();
+}

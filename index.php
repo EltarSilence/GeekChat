@@ -14,12 +14,17 @@ ZRoute::get("/chat", function (){
 }, "chat");
 
 ZRoute::get("/test", function (){
-  
+
 });
 
 /*           CHIAMATE AJAX            */
 ZRoute::post("/getOnlineUser", function (){
-  Controller::getOnlineUser();
+  $j = Controller::getOnlineUser();
+  foreach($j as $k => $v){
+    $u = new User($v);
+    echo $u->getHtml();
+  }
+
 });
 
 ZRoute::post("/show_my_profile", function (){

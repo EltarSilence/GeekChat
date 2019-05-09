@@ -86,19 +86,19 @@ class Controller{
     	die();
     }
     $date = new DateTime('- 15 second');
-    $result = $mysqli->query("SELECT username, immagine, bio FROM utenti WHERE lastAccess >=".$date->format('Y-m-d H:i:s'));
+    $result = $mysqli->query("SELECT username, immagine, bio FROM utenti WHERE lastAccess >='".$date->format('Y-m-d H:i:s')."' ORDER BY username");
     $result = $conn->query($sql);   //esecuzione query
     while($row = $result->fetch_assoc()){
       $row['online'] = true;
       $j[] = $row;
     }
-    $result = $mysqli->query("SELECT username, immagine, bio FROM utenti WHERE lastAccess <".$date->format('Y-m-d H:i:s'));
+    $result = $mysqli->query("SELECT username, immagine, bio FROM utenti WHERE lastAccess <'".$date->format('Y-m-d H:i:s')."' ORDER BY username");
     $result = $conn->query($sql);   //esecuzione query
     while($row = $result->fetch_assoc()){
       $row['online'] = false;
       $j[] = $row;
     }
-    echo json_encode($j);
+    return json_encode($j);
   }
 
 

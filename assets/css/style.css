@@ -1,3 +1,12 @@
-.myrow{
-    border: 1px solid black;
+body{
+  overflow: hidden;
+}
+.user-nav{
+  height: 10%;
+}
+.user-nav nav{
+  border-bottom: 1px solid black;
+}
+.content-nav{
+  height: 90%;
 }

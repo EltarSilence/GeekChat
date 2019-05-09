@@ -24,7 +24,6 @@ ZRoute::post("/getOnlineUser", function (){
     $u = new User($v);
     echo $u->getHtml();
   }
-
 });
 
 ZRoute::post("/show_my_profile", function (){

@@ -3,7 +3,7 @@ $( document ).ready(function() {
 	$("#row3").toggle();
 });
 
-$("#coll").on("click", function(){
+$("#coll").click(function(){
 	$("#row2").toggle();
   if ($('#row3').is(":visible")){
     $('#row3').toggle();
@@ -12,7 +12,7 @@ $("#coll").on("click", function(){
   $(this).find('i').toggleClass('fa-chevron-down fa-chevron-up');
 });
 
-$("#coll2").on("click", function(){
+$("#coll2").click(function(){
 	$("#row3").toggle();
   $(this).find('i').toggleClass('fa-chevron-down fa-chevron-up');
 })

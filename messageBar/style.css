@@ -8,6 +8,23 @@
 	background-color: #d1d8e0;
 }
 
+#files {
+	display: flex;
+	transition: box-shadow .5s linear;
+}
+
+#files button {
+		margin: 10px;
+}
+
+#files button:hover {
+	box-shadow: 0 0 11px rgba(33,33,33,.2);
+}
+
 button {
 	margin: 0;
+}
+
+div[id^=row] {
+	padding-top: 10px;
 }

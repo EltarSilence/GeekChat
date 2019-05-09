@@ -14,10 +14,14 @@ ZRoute::get("/chat", function (){
 }, "chat");
 
 ZRoute::get("/test", function (){
-  Controller::getOnlineUser();
+  
 });
 
 /*           CHIAMATE AJAX            */
+ZRoute::post("/getOnlineUser", function (){
+  Controller::getOnlineUser();
+});
+
 ZRoute::post("/show_my_profile", function (){
   //Qui ci va lo script che deve essere esguito quando si fa una chiamata AJAX per mostrare il mio profilo
 }, "my_profile");

@@ -13,6 +13,10 @@ ZRoute::get("/chat", function (){
   AppView::get("chat");
 }, "chat");
 
+ZRoute::get("/test", function (){
+  Controller::getOnlineUser();
+});
+
 /*           CHIAMATE AJAX            */
 ZRoute::post("/show_my_profile", function (){
   //Qui ci va lo script che deve essere esguito quando si fa una chiamata AJAX per mostrare il mio profilo

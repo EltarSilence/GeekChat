@@ -74,5 +74,32 @@ class Controller{
     return boolval($ret);
   }
 
+  public static function getOnlineUser(){
+  	$j = [];            //array associativo di risposta
+    $mysqli = new mysqli(
+      ZConfig::config("DB_HOST", "localhost"),
+      ZConfig::config("DB_USER", "root"),
+      ZConfig::config("DB_PASSWORD", ""),
+      ZConfig::config("DB_DATABASE", "geekchat")
+    );
+    if($mysqli->connect_errno){
+    	die();
+    }
+    $date = new DateTime('- 15 second');
+    $result = $mysqli->query("SELECT username, immagine, bio FROM utenti WHERE lastAccess >=".$date->format('Y-m-d H:i:s'));
+    $result = $conn->query($sql);   //esecuzione query
+    while($row = $result->fetch_assoc()){
+      $row['online'] = true;
+      $j[] = $row;
+    }
+    $result = $mysqli->query("SELECT username, immagine, bio FROM utenti WHERE lastAccess <".$date->format('Y-m-d H:i:s'));
+    $result = $conn->query($sql);   //esecuzione query
+    while($row = $result->fetch_assoc()){
+      $row['online'] = false;
+      $j[] = $row;
+    }
+    echo json_encode($j);
+  }
+
 
 }

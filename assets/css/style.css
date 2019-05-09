@@ -10,3 +10,17 @@ body{
 .content-nav{
   height: 90%;
 }
+#users{
+  height: 100%;
+  overflow-y: scroll;
+}
+#users::-webkit-scrollbar {
+  width: 5px;
+}
+#users::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 10px #3e3e3e;
+}
+#users::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background: #555;
+}

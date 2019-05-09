@@ -1,5 +1,6 @@
 .user{
   cursor: pointer;
+  margin: 1rem 0;
 }
 .user:hover{
   background-color: #b7dbe8;

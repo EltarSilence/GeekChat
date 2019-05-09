@@ -1,13 +1,15 @@
 -- phpMyAdmin SQL Dump
--- version 4.5.1
--- http://www.phpmyadmin.net
+-- version 4.7.0
+-- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 09, 2019 at 08:27 AM
--- Server version: 10.1.10-MariaDB
--- PHP Version: 5.6.19
+-- Creato il: Mar 18, 2019 alle 15:19
+-- Versione del server: 5.7.17
+-- Versione PHP: 5.6.30
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
+START TRANSACTION;
 SET time_zone = "+00:00";
 
 
@@ -19,59 +21,61 @@ SET time_zone = "+00:00";
 --
 -- Database: `geekchat`
 --
+CREATE DATABASE IF NOT EXISTS `geekchat` DEFAULT CHARACTER SET utf8;
+USE `geekchat`;
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `audio`
+-- Struttura della tabella `audio`
 --
 
 CREATE TABLE `audio` (
   `id` int(11) NOT NULL,
   `url` varchar(200) NOT NULL,
   `idMessaggio` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `documenti`
+-- Struttura della tabella `documenti`
 --
 
 CREATE TABLE `documenti` (
   `id` int(11) NOT NULL,
   `url` varchar(200) NOT NULL,
   `idMessaggio` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `immagini`
+-- Struttura della tabella `immagini`
 --
 
 CREATE TABLE `immagini` (
   `id` int(11) NOT NULL,
   `url` varchar(200) NOT NULL,
   `idMessaggio` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `links`
+-- Struttura della tabella `links`
 --
 
 CREATE TABLE `links` (
   `id` int(11) NOT NULL,
   `url` varchar(200) NOT NULL,
   `idMessaggio` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `messaggi`
+-- Struttura della tabella `messaggi`
 --
 
 CREATE TABLE `messaggi` (
@@ -80,21 +84,12 @@ CREATE TABLE `messaggi` (
   `dataOraInvio` datetime NOT NULL,
   `idReply` int(11) DEFAULT NULL,
   `idUtente` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `messaggi`
---
-
-INSERT INTO `messaggi` (`id`, `testo`, `dataOraInvio`, `idReply`, `idUtente`) VALUES
-(1, 'ciao', '2019-03-25 06:15:15', NULL, 1),
-(2, 'bella', '2019-03-25 06:25:25', NULL, 1),
-(3, 'li', '2019-04-04 08:00:00', 2, 1);
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `posizioni`
+-- Struttura della tabella `posizioni`
 --
 
 CREATE TABLE `posizioni` (
@@ -102,36 +97,36 @@ CREATE TABLE `posizioni` (
   `lat` float NOT NULL,
   `lon` float NOT NULL,
   `idMessaggio` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `risposte`
+-- Struttura della tabella `risposte`
 --
 
 CREATE TABLE `risposte` (
   `id` int(11) NOT NULL,
   `testo` varchar(50) NOT NULL,
   `idSondaggio` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `sondaggi`
+-- Struttura della tabella `sondaggi`
 --
 
 CREATE TABLE `sondaggi` (
   `id` int(11) NOT NULL,
   `quesito` varchar(50) NOT NULL,
   `idMessaggio` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `utenti`
+-- Struttura della tabella `utenti`
 --
 
 CREATE TABLE `utenti` (
@@ -142,24 +137,12 @@ CREATE TABLE `utenti` (
   `immagine` varchar(150) DEFAULT NULL,
   `password` varchar(30) NOT NULL,
   `lastAccess` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `utenti`
---
-
-INSERT INTO `utenti` (`id`, `username`, `isAdmin`, `bio`, `immagine`, `password`, `lastAccess`) VALUES
-(1, 'pippo', 0, 'nope', 'nope', 'nope', '0000-00-00 00:00:00'),
-(2, 'pegaso', 0, 'wiiiiiii', NULL, 'wipegasowi', '2019-04-11 11:11:11'),
-(6, 'ottobell', 1, 'mi piacciono i pesci rossi', NULL, 'supaidaman', '2019-04-10 09:13:48'),
-(9, 'MarchiINE', 0, 'IANE u know?', NULL, 'alexander', '2019-04-15 08:00:00'),
-(10, 'pescaca', 1, 'nope', NULL, 'nope', '0000-00-00 00:00:00'),
-(11, 'polastro', 1, 'pololoco polastro', NULL, 'peopeo', '2019-04-04 00:00:00');
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `votazioni`
+-- Struttura della tabella `votazioni`
 --
 
 CREATE TABLE `votazioni` (
@@ -167,42 +150,42 @@ CREATE TABLE `votazioni` (
   `dataOra` datetime NOT NULL,
   `idUtente` int(11) NOT NULL,
   `idRisposta` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Indexes for dumped tables
+-- Indici per le tabelle scaricate
 --
 
 --
--- Indexes for table `audio`
+-- Indici per le tabelle `audio`
 --
 ALTER TABLE `audio`
   ADD PRIMARY KEY (`id`),
   ADD KEY `idMessaggio` (`idMessaggio`);
 
 --
--- Indexes for table `documenti`
+-- Indici per le tabelle `documenti`
 --
 ALTER TABLE `documenti`
   ADD PRIMARY KEY (`id`),
   ADD KEY `idMessaggio` (`idMessaggio`);
 
 --
--- Indexes for table `immagini`
+-- Indici per le tabelle `immagini`
 --
 ALTER TABLE `immagini`
   ADD PRIMARY KEY (`id`),
   ADD KEY `idMessaggio` (`idMessaggio`);
 
 --
--- Indexes for table `links`
+-- Indici per le tabelle `links`
 --
 ALTER TABLE `links`
   ADD PRIMARY KEY (`id`),
   ADD KEY `idMessaggio` (`idMessaggio`);
 
 --
--- Indexes for table `messaggi`
+-- Indici per le tabelle `messaggi`
 --
 ALTER TABLE `messaggi`
   ADD PRIMARY KEY (`id`),
@@ -210,34 +193,34 @@ ALTER TABLE `messaggi`
   ADD KEY `idReply` (`idReply`);
 
 --
--- Indexes for table `posizioni`
+-- Indici per le tabelle `posizioni`
 --
 ALTER TABLE `posizioni`
   ADD PRIMARY KEY (`id`),
   ADD KEY `idMessaggio` (`idMessaggio`);
 
 --
--- Indexes for table `risposte`
+-- Indici per le tabelle `risposte`
 --
 ALTER TABLE `risposte`
   ADD PRIMARY KEY (`id`),
   ADD KEY `idSondaggio` (`idSondaggio`);
 
 --
--- Indexes for table `sondaggi`
+-- Indici per le tabelle `sondaggi`
 --
 ALTER TABLE `sondaggi`
   ADD PRIMARY KEY (`id`),
   ADD KEY `idMessaggio` (`idMessaggio`);
 
 --
--- Indexes for table `utenti`
+-- Indici per le tabelle `utenti`
 --
 ALTER TABLE `utenti`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `votazioni`
+-- Indici per le tabelle `votazioni`
 --
 ALTER TABLE `votazioni`
   ADD PRIMARY KEY (`id`),
@@ -245,118 +228,119 @@ ALTER TABLE `votazioni`
   ADD KEY `idRisposta` (`idRisposta`);
 
 --
--- AUTO_INCREMENT for dumped tables
+-- AUTO_INCREMENT per le tabelle scaricate
 --
 
 --
--- AUTO_INCREMENT for table `audio`
+-- AUTO_INCREMENT per la tabella `audio`
 --
 ALTER TABLE `audio`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 --
--- AUTO_INCREMENT for table `documenti`
+-- AUTO_INCREMENT per la tabella `documenti`
 --
 ALTER TABLE `documenti`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 --
--- AUTO_INCREMENT for table `immagini`
+-- AUTO_INCREMENT per la tabella `immagini`
 --
 ALTER TABLE `immagini`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 --
--- AUTO_INCREMENT for table `links`
+-- AUTO_INCREMENT per la tabella `links`
 --
 ALTER TABLE `links`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 --
--- AUTO_INCREMENT for table `messaggi`
+-- AUTO_INCREMENT per la tabella `messaggi`
 --
 ALTER TABLE `messaggi`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 --
--- AUTO_INCREMENT for table `posizioni`
+-- AUTO_INCREMENT per la tabella `posizioni`
 --
 ALTER TABLE `posizioni`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 --
--- AUTO_INCREMENT for table `risposte`
+-- AUTO_INCREMENT per la tabella `risposte`
 --
 ALTER TABLE `risposte`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 --
--- AUTO_INCREMENT for table `sondaggi`
+-- AUTO_INCREMENT per la tabella `sondaggi`
 --
 ALTER TABLE `sondaggi`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 --
--- AUTO_INCREMENT for table `utenti`
+-- AUTO_INCREMENT per la tabella `utenti`
 --
 ALTER TABLE `utenti`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 --
--- AUTO_INCREMENT for table `votazioni`
+-- AUTO_INCREMENT per la tabella `votazioni`
 --
 ALTER TABLE `votazioni`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 --
--- Constraints for dumped tables
+-- Limiti per le tabelle scaricate
 --
 
 --
--- Constraints for table `audio`
+-- Limiti per la tabella `audio`
 --
 ALTER TABLE `audio`
   ADD CONSTRAINT `audio_ibfk_1` FOREIGN KEY (`idMessaggio`) REFERENCES `messaggi` (`id`);
 
 --
--- Constraints for table `documenti`
+-- Limiti per la tabella `documenti`
 --
 ALTER TABLE `documenti`
   ADD CONSTRAINT `documenti_ibfk_1` FOREIGN KEY (`idMessaggio`) REFERENCES `messaggi` (`id`);
 
 --
--- Constraints for table `immagini`
+-- Limiti per la tabella `immagini`
 --
 ALTER TABLE `immagini`
   ADD CONSTRAINT `immagini_ibfk_1` FOREIGN KEY (`idMessaggio`) REFERENCES `messaggi` (`id`);
 
 --
--- Constraints for table `links`
+-- Limiti per la tabella `links`
 --
 ALTER TABLE `links`
   ADD CONSTRAINT `links_ibfk_1` FOREIGN KEY (`idMessaggio`) REFERENCES `messaggi` (`id`);
 
 --
--- Constraints for table `messaggi`
+-- Limiti per la tabella `messaggi`
 --
 ALTER TABLE `messaggi`
   ADD CONSTRAINT `messaggi_ibfk_1` FOREIGN KEY (`idUtente`) REFERENCES `utenti` (`id`),
   ADD CONSTRAINT `messaggi_ibfk_2` FOREIGN KEY (`idReply`) REFERENCES `messaggi` (`id`);
 
 --
--- Constraints for table `posizioni`
+-- Limiti per la tabella `posizioni`
 --
 ALTER TABLE `posizioni`
   ADD CONSTRAINT `posizioni_ibfk_1` FOREIGN KEY (`idMessaggio`) REFERENCES `messaggi` (`id`);
 
 --
--- Constraints for table `risposte`
+-- Limiti per la tabella `risposte`
 --
 ALTER TABLE `risposte`
   ADD CONSTRAINT `risposte_ibfk_1` FOREIGN KEY (`idSondaggio`) REFERENCES `sondaggi` (`id`);
 
 --
--- Constraints for table `sondaggi`
+-- Limiti per la tabella `sondaggi`
 --
 ALTER TABLE `sondaggi`
   ADD CONSTRAINT `sondaggi_ibfk_1` FOREIGN KEY (`idMessaggio`) REFERENCES `messaggi` (`id`);
 
 --
--- Constraints for table `votazioni`
+-- Limiti per la tabella `votazioni`
 --
 ALTER TABLE `votazioni`
   ADD CONSTRAINT `votazioni_ibfk_1` FOREIGN KEY (`idUtente`) REFERENCES `utenti` (`id`),
   ADD CONSTRAINT `votazioni_ibfk_2` FOREIGN KEY (`idRisposta`) REFERENCES `risposte` (`id`);
+COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

@@ -24,3 +24,9 @@ body{
   border-radius: 10px;
   background: #555;
 }
+#messageBar{
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  width: 66.667%;
+}

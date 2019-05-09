@@ -3,6 +3,7 @@ require_once 'Zexarel/loader.php';
 
 require_once 'server/view/AppView.php';
 require_once 'server/controller/Controller.php';
+require_once 'server/controller/API.php';
 require_once 'server/model/user.php';
 
 ZRoute::get("/", function (){
@@ -19,7 +20,7 @@ ZRoute::get("/test", function (){
 
 /*           CHIAMATE AJAX            */
 ZRoute::post("/getOnlineUser", function (){
-  $j = Controller::getOnlineUser();
+  $j = API::getOnlineUser();
   foreach($j as $k => $v){
     $u = new User($v);
     echo $u->getHtml();

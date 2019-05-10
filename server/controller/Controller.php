@@ -40,6 +40,25 @@ class Controller{
     return boolval($ret);
   }
 
+  /*
+    Funzione per settare che un utente è online
+    @input
+      id    -> id dell'utente
+  */
+  public static function updateOnlineStatus($id){
+    $DB = new mysqli(
+      ZConfig::config("DB_HOST", "localhost"),
+      ZConfig::config("DB_USER", "root"),
+      ZConfig::config("DB_PASSWORD", ""),
+      ZConfig::config("DB_DATABASE", "geekchat")
+    );
+    if($DB->connect_errno){
+      die();
+    }
+    $ret = $DB->query("UPDATE utenti SET lastAccess = NOW() WHERE id = ".$id);
+    return boolval($ret);
+  }
+
 
 
 

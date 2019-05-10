@@ -1,5 +1,11 @@
 <?php
 class API{
+
+  /*
+    Funzione per ottenere i dati di un profilo
+    @input
+      id    -> id dell'utente
+  */
   public static function getProfile($id){
     $j = [];            //array associativo di risposta
     if(isset($id) && !empty($id)){
@@ -34,6 +40,20 @@ class API{
     return $j;
   }
 
+  /*
+    Funzione per ottenere tutti gli utenti divisi tra online e offline
+    @input
+      /
+    @output
+      [
+        [
+          "username" : <username>,
+          "immagine" : <immagine>,
+          "bio" : <bio>,
+          "online" : <true/false>,
+        ]
+      ]
+  */
   public static function getOnlineUser(){
     $j = [];            //array associativo di risposta
     $mysqli = new mysqli(

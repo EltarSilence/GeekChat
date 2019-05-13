@@ -3,7 +3,11 @@ require_once 'Zexarel/loader.php';
 
 require_once 'server/view/AppView.php';
 require_once 'server/controller/Controller.php';
+require_once 'server/controller/API.php';
 require_once 'server/model/user.php';
+
+session_start();
+$_SESSION['id'] = 1;
 
 ZRoute::get("/", function (){
   redirect("chat");
@@ -18,18 +22,29 @@ ZRoute::get("/test", function (){
 });
 
 /*           CHIAMATE AJAX            */
+ZRoute::post("/updateOnlineStatus", function(){
+  if(isset($_SESSION['id'])){
+    if(Controller::updateOnlineStatus($_SESSION['id'])){
+      die();
+    }
+    http_response_code(500);
+    die();
+  }
+  http_response_code(500);
+  die();
+});
+
 ZRoute::post("/getOnlineUser", function (){
-  $j = Controller::getOnlineUser();
+  $j = API::getOnlineUser();
   foreach($j as $k => $v){
     $u = new User($v);
     echo $u->getHtml();
   }
-
 });
 
 ZRoute::post("/show_my_profile", function (){
   //Qui ci va lo script che deve essere esguito quando si fa una chiamata AJAX per mostrare il mio profilo
-}, "my_profile");
+});
 
 /*
   Chiamata per settare un nuovo username
@@ -41,12 +56,12 @@ ZRoute::post("/edit_username", function($data){
     if(Controller::editUsername($_SESSION['id'], $data['username'])){
       die();
     }
-    http_responce_code(500);
+    http_response_code(500);
     die();
   }
-  http_responce_code(500);
+  http_response_code(500);
   die();
-}, "edit_username");
+});
 
 /*
   Chiamata per settare un nuova descrizione
@@ -58,12 +73,12 @@ ZRoute::post("/edit_descrizione", function($data){
     if(Controller::editDescrizione($_SESSION['id'], $data['desc'])){
       die();
     }
-    http_responce_code(500);
+    http_response_code(500);
     die();
   }
-  http_responce_code(500);
+  http_response_code(500);
   die();
-}, "edit_descrizione");
+});
 
 
 ZRoute::listen();

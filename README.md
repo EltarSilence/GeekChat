@@ -27,7 +27,7 @@ GeekChat's a school project which we decided to develop in order to learn leastw
 	- Text message (including Emojii)
 	- Audio message
 	- Images
-	- Sticker
+	- Link
 	- Documents
 	- Geographic positions
 	- Polls

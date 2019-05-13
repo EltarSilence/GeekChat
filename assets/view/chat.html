@@ -1,16 +1,21 @@
-    @content
-<div class="container-fluid">
-  <div class="row myrow">
-    @yield('_nav')
-  </div>
-  <div class="row">
-    <div class="col-4" id="users">
+@content
+<div class="container-fluid pl-0 pr-0">
+  @yield('_nav')
+  <div class="row ml-0 mr-0 content-nav">
+    <div class="left">
+      <div class="border-right pt-3 pb-3 pl-2 pr-2" id="users">
+      </div>
     </div>
-    <div class="col-8">
+
+    <div class="pl-0 pr-0" id="chat">
       <div class="container-fluid">
         @yield('_chat')
       </div>
-      @yield('_messageBar')
+      <div class="container-fluid pl-0 pr-0 border-top" id="messageBar">
+        <div class="col-12 ml-1 mr-1">
+          @yield('_messageBar')
+        </div>
+      </div>
     </div>
   </div>
 </div>
@@ -18,8 +23,11 @@
 
 @css
 <link rel="stylesheet" href="assets/css/user.css"/>
+<link rel="stylesheet" href="assets/css/messageBar.css"/>
+<link rel="stylesheet" href="assets/css/emojii.css"/>
 @endcss
 
 @js
 <script src="assets/js/user.js" charset="utf-8"></script>
+<script src="assets/js/messageBar.js" charset="utf-8"></script>
 @endjs

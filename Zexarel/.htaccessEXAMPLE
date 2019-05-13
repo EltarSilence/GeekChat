@@ -1,0 +1,26 @@
+RewriteEngine On
+
+# If you are in a subfolder, you don't need this:
+RewriteBase /
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+RewriteRule ^(.+)$ index.php?uri=$1 [QSA,L]
+
+<FilesMatch "^\.zenv">
+  Order allow,deny
+  Deny from all
+</FilesMatch>
+
+<FilesMatch "^\.htaccess">
+  Order allow,deny
+  Deny from all
+</FilesMatch>
+
+RewriteRule (^|/)log(/|$) - [F]
+
+ErrorDocument 403 /Zexarel/error/403.html
+ErrorDocument 404 /Zexarel/error/404.html
+ErrorDocument 405 /Zexarel/error/405.html
+ErrorDocument 500 /Zexarel/error/500.html

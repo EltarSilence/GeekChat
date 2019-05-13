@@ -1,5 +1,6 @@
 .user{
   cursor: pointer;
+  margin: 1rem 0;
 }
 .user:hover{
   background-color: #b7dbe8;
@@ -21,12 +22,13 @@
   height: 20px;
   text-align: center;
   border-radius: 100%;
-  box-shadow: inset -1px 0px 10px 1px #ff8888;
   border: 1px solid #ccc;
 }
 .dot-green {
+  box-shadow: inset -1px 0px 10px 1px #88ff88;
   background-color: green;
 }
 .dot-red {
+  box-shadow: inset -1px 0px 10px 1px #ff8888;
   background-color: red;
 }

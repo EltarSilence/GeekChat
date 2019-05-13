@@ -1,0 +1,42 @@
+{
+	"name" : "Zexarel",
+	"version" : "1.2.2",
+	"require" : {
+		"function" : {
+			"find" : "find.php",
+			"get_string_between" : "get_string_between.php",
+			"redirect" : "redirect.php",
+			"d_var_dump" : "d_var_dump.php"
+		},
+		"class" : {
+			"ZConfig" : {
+				"ZConfig" : "ZConfig.php"
+			},
+			"ZLogger" : {
+				"Log" : "Log.php",
+				"ZLogger" : "ZLogger.php"
+			},
+			"ZKernel" : {
+				"ZKernel" : "ZKernel.php"
+			},
+			"ZDatabase" : {
+				"ZDatabase" : "ZDatabase.php"
+			},
+			"ZSession" :{
+				"DatabaseSession" : "DatabaseSession.php",
+				"SessionHandle" : "SessionHandle.php",
+				"ZSession" : "ZSession.php"
+			},
+			"ZRoute" : {
+				"Request" : "Request.php",
+				"Route" : "Route.php",
+				"ZRoute" : "ZRoute.php"
+			},
+			"ZView" : {
+				"ZBladeCompiler" : "ZBladeCompiler.php",
+				"ZView" : "ZView.php",
+				"ZModel" : "ZModel.php"
+			}
+		}
+	}
+}

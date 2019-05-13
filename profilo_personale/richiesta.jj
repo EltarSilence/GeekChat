@@ -1,0 +1,18 @@
+/*
+function loadProfile(v){
+	var req=new XMLHttpRequest();
+
+	req.open("GET","profilojson.php?utente="+v,true);
+	req.onreadystatechange=function(){
+		var testo="";
+		var objJSON=JSON.parse(req.responseText);
+		testo=testo+"username: "+objJSON[0].username+"<br>";
+		testo=testo+"biografia: "+objJSON[0].biografia+"<br>";
+		testo=testo+"immagine di profilo: "+objJSON[0].img+"<br>";		
+		testo=testo+"immagine di profilo: "+objJSON[0].img+"<br>";
+		testo=testo+"immagine di profilo: "+objJSON[0].img+"<br>";
+		document.getElementById("demo").innerHTML=testo;
+	}
+	req.send();						
+}
+*/

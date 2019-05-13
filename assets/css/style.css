@@ -1,3 +1,36 @@
-.myrow{
-    border: 1px solid black;
+body{
+  overflow: hidden;
+}
+.user-nav{
+  height: 10%;
+}
+.user-nav nav{
+  border-bottom: 1px solid black;
+}
+.content-nav{
+  height: 90%;
+}
+#users{
+  height: 100%;
+  width: 30%;
+  overflow-y: scroll;
+}
+#users::-webkit-scrollbar {
+  width: 5px;
+}
+#users::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 10px #3e3e3e;
+}
+#users::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background: #555;
+}
+#chat{
+  width: 70%;
+}
+#messageBar{
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  width: 70%;
 }

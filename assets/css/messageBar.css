@@ -10,9 +10,34 @@
 
 #files {
 	display: flex;
-	transition: box-shadow .5s linear;
+	border: 1px black;
+	border-radius: 20px;
+	transition: box-shadow .2s ease-in-out;
 }
 
+#files:hover {
+	transition: box-shadow .2s ease-in-out;
+	box-shadow: 2px 2px 2px 2px black;
+}
+
+#files span {
+	color: black;
+	font-weight: bold;
+	text-transform: uppercase;
+	letter-spacing: 8px;
+	padding: 15px;
+}
+/*
+#files span i {
+	-webkit-animation:spin 4s linear infinite;
+    -moz-animation:spin 4s linear infinite;
+    animation:spin 4s linear infinite;
+}
+
+@-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
+@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
+@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
+*/
 #files button {
 		margin: 10px;
 }

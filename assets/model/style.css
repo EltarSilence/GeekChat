@@ -92,3 +92,9 @@
     transition: 0.6s ease;
     filter: invert(100%);
 }
+
+.imgmess {
+    //max-width: 400px;
+    //max-height: 400px;
+    float: right;
+}

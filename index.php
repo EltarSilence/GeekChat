@@ -6,6 +6,9 @@ require_once 'server/controller/Controller.php';
 require_once 'server/controller/API.php';
 require_once 'server/model/user.php';
 
+session_start();
+$_SESSION['id'] = 1;
+
 ZRoute::get("/", function (){
   redirect("chat");
 });

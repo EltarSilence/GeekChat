@@ -10,9 +10,11 @@ body{
 .content-nav{
   height: 90%;
 }
+.left{
+  width: 30%;
+}
 #users{
   height: 100%;
-  width: 30%;
   overflow-y: scroll;
 }
 #users::-webkit-scrollbar {

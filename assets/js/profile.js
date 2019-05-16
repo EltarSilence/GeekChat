@@ -6,8 +6,13 @@ $(document).ready(function(){
       data : {},
       success : function(data){
         $('#profile').html(data);
+        $('#profile').slideDown();
         $('button').on('click', function(){
-          $('#profile').html("");
+          $('#profile').slideUp();
+          setTimeout(function(){
+            $('#profile').html("");
+          }, 800);
+
         });
         addSaveAjax();
       },

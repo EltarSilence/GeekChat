@@ -5,6 +5,7 @@ require_once 'server/view/AppView.php';
 require_once 'server/controller/Controller.php';
 require_once 'server/controller/API.php';
 require_once 'server/model/user.php';
+require_once 'server/model/myProfile.php';
 
 session_start();
 $_SESSION['id'] = 1;
@@ -43,10 +44,12 @@ ZRoute::post("/getOnlineUser", function (){
 
 ZRoute::post("/my_profile", function (){
   if(isset($_SESSION['id'])){
-    
+    $p = new MyProfile();
+    echo $p->getHtml();
+  }else{
+    http_response_code(500);
+    die();
   }
-  http_response_code(500);
-  die();
 });
 
 /*

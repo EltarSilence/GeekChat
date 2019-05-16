@@ -33,7 +33,6 @@ ZRoute::post("/updateOnlineStatus", function(){
   http_response_code(500);
   die();
 });
-
 ZRoute::post("/getOnlineUser", function (){
   $j = API::getOnlineUser();
   foreach($j as $k => $v){
@@ -42,8 +41,12 @@ ZRoute::post("/getOnlineUser", function (){
   }
 });
 
-ZRoute::post("/show_my_profile", function (){
-  //Qui ci va lo script che deve essere esguito quando si fa una chiamata AJAX per mostrare il mio profilo
+ZRoute::post("/my_profile", function (){
+  if(isset($_SESSION['id'])){
+    
+  }
+  http_response_code(500);
+  die();
 });
 
 /*

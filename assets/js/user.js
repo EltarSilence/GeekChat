@@ -14,6 +14,7 @@ function ajax_getOnlineUser(){
     data : {},
     success : function(data){
       $('#users').html(data);
+      addAjax();
       $("div[id^=tooltip]").remove();
       $(function(){
         $('[data-toggle="tooltip"]').tooltip()
@@ -30,5 +31,22 @@ function ajax_updateOnlineStatus(){
     },
     error: function(er){
     }
+  });
+}
+function addAjax(){
+  $('#users a').on('click', function(){
+    $.ajax({
+      url : "show_profile",
+      method : "POST",
+      data : {
+        "id" : $(this).attr("data-id")
+      },
+      success : function(data){
+        $('#profile').html(data);
+      },
+      error : function(er){
+        console.log(er);
+      }
+    });
   });
 }

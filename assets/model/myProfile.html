@@ -1,25 +1,11 @@
-<div class="container-fluid">
-  <div class="row justify-content-md-center" id="bluediv">
-    <div class="col col-lg-12" id="username">
-      <h6 class="top">username</h6>
-    </div>
-    <br>
-    <div onclick="seeimg" class="col col-lg-12" id="img">
-      <img src="https://images.exxactcorp.com/productimages/med_lrg/EXX-IMG-2597649.jpg" class="rounded-circle" id="profileimg">
-    </div>
-    <div class="col col-lg-12" id="bio">
-      <textarea maxlength="200" form="useform" name="testo">Biografia</textarea>
-    </div>
-    <br>
-    <div class="col col-lg-9">
-      <br>
-      <button type="button" class="btn btn-primary mb-2">Ritorna</button>
-    </div>
-    <div class="col col-lg-3">
-      <br>
-      <form method="post" action="testphp.php" id="useform">
-        <button type="submit" class="btn btn-primary mb-2">Salva</button>
-      </form>
-    </div>
+<div class="container-fluid justify-content-md-center pt-2" id="bluediv">
+  <div class="col-12" id="username">
+    <h3 class="top">username</h3>
   </div>
+  <img src="https://images.exxactcorp.com/productimages/med_lrg/EXX-IMG-2597649.jpg" class="rounded-circle col-12 pl-0 pr-0 mt-2 mb-2" id="profileimg">
+  <textarea maxlength="200" class="form-control col-12 mt-2" id="bio">Biografia</textarea>
+
+  <button type="button" class="btn btn-primary mb-2">Ritorna</button>
+
+  <button type="submit" class="btn btn-primary mb-2">Salva</button>
 </div>

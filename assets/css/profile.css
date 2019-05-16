@@ -3,7 +3,7 @@
 	height: 100%
 }
 
-h6.top {
+.top {
 	color: white;
 	text-align: center;
 }
@@ -16,11 +16,12 @@ h6.top {
 #profileimg {
 	margin-left: 20%;
 	width: 60%;
+	box-shadow: 1px 1px 16px 1px black;
 }
 
 textarea {
 	width: 100%;
-	height: 25%;
+	height: 25% !important;
 	resize: none;
 }
 #profile{

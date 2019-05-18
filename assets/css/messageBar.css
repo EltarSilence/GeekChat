@@ -1,60 +1,52 @@
-#row2,
-#row3 {
-	display: none;
-}
-
 .sendmsg {
 	height: 27px;
 }
-
 .send {
 	height: 100%;
 	font-size: 16;
 	background-color: #d1d8e0;
 }
 
-#files {
-	display: flex;
-	border: 1px black;
-	border-radius: 20px;
-	transition: box-shadow .2s ease-in-out;
+#row2,
+#row3 {
+	display: none;
 }
-
-#files:hover {
-	transition: box-shadow .2s ease-in-out;
-	box-shadow: 2px 2px 2px 2px black;
+#row2 > div{
+	flex-direction: row;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-
-#files span {
-	color: black;
-	font-weight: bold;
-	text-transform: uppercase;
-	letter-spacing: 8px;
-	padding: 15px;
+#row2 button{
+	margin-left: 5%;
 }
-/*
-#files span i {
-	-webkit-animation:spin 4s linear infinite;
-    -moz-animation:spin 4s linear infinite;
-    animation:spin 4s linear infinite;
+#row2 button:hover{
+  box-shadow: inset 0 0 16px 1px white;
 }
-
-@-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
-@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
-@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
-*/
-#files button {
-		margin: 10px;
+.btn-circle{
+	width: 30px;
+	height: 30px;
+	padding: 6px 0px;
+	font-size: 12px;
+	line-height: 1.428571429;
+	text-align: center;
+	border-radius: 100%;
 }
-
-#files button:hover {
-	box-shadow: 0 0 11px rgba(33,33,33,.2);
+.btn-circle-lg{
+	width: 50px;
+	height: 50px;
+	padding: 10px 16px;
+	font-size: 18x;
+	line-height: 1.33;
+	text-align: center;
+	border-radius: 100%;
 }
-
-button {
-	margin: 0;
-}
-
-div[id^=row] {
-	padding-top: 10px;
+.btn-circle-xl{
+	width: 70px;
+	height: 70px;
+	padding: 10px 16px;
+	font-size: 24px;
+	line-height: 1.33;
+	text-align: center;
+	border-radius: 100%;
 }

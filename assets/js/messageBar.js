@@ -1,7 +1,4 @@
-$(document).ready(function() {
-  $("#row2").toggle();
-	$("#row3").toggle();
-
+$(document).ready(function(){
   $("#coll").click(function(){
   	$("#row2").toggle();
     if ($('#row3').is(":visible")){

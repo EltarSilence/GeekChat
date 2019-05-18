@@ -44,7 +44,7 @@ ZRoute::post("/getOnlineUser", function (){
 
 ZRoute::post("/my_profile", function (){
   if(isset($_SESSION['id'])){
-    $p = new MyProfile();
+    $p = new MyProfile(API::getProfile($_SESSION['id']));
     echo $p->getHtml();
   }else{
     http_response_code(500);

@@ -18,18 +18,16 @@ class API{
       if($mysqli->connect_errno){
         die();
       }
-      $id = isset($_GET['id']) ? $_GET['id'] : 0;
-      $result = $mysqli->query("SELECT * FROM utenti WHERE id =".$id);
-      $result = $conn->query($sql);   //esecuzione query
-      $data = $result->fetch_assoc(); //da obj a arr associativo
+      $result = $mysqli->query("SELECT * FROM utenti WHERE id = ".$id);
       if($result->num_rows == 0){     //no user found
         $j['error'] = true;
         $j['errorMSG'] = "Non esistono utenti con questo ID";
       }else{                          //utente trovato -> assegnazione dati
+        $data = $result->fetch_assoc(); //da obj a arr associativo
         $j['username'] = $data['username'];
         $j['isAdmin'] = $data['isAdmin'];
         $j['bio'] = $data['bio'];
-        $j['immagine'] = $data['immagine'];
+        $j['immagine'] = isset($data['immagine']) ? $data['immagine'] : "user.png";
         $j['lastAccess'] = $data['lastAccess'];
         $j['error'] = false;
       }

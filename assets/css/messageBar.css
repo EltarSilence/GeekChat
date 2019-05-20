@@ -50,3 +50,8 @@
 	text-align: center;
 	border-radius: 100%;
 }
+
+#timer{
+	font-size: 1rem;
+	display: none;
+}

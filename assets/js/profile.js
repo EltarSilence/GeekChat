@@ -7,7 +7,7 @@ $(document).ready(function(){
       success : function(data){
         $('#profile').html(data);
         $('#profile').slideDown();
-        $('button').on('click', function(){
+        $('#backbutton').on('click', function(){
           $('#profile').slideUp();
           setTimeout(function(){
             $('#profile').html("");

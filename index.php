@@ -9,6 +9,7 @@ require_once 'server/model/myProfile.php';
 
 session_start();
 $_SESSION['id'] = 1;
+$_SESSION['username'] = "Zexal0807";
 
 ZRoute::get("/", function (){
   redirect("chat");

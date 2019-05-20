@@ -19,6 +19,23 @@ textarea {
 	height: 25% !important;
 	resize: none;
 }
+
+#safe {
+	margin-left: 40%;
+	margin-top: 1%;
+}
+
 #profile{
 	display: none;
+}
+
+#backbutton{
+	margin-top: 2%;
+	font-size: 3rem;
+	color: white;
+}
+
+#backbutton:hover{
+	text-shadow: 1px 1px 16px 1px black;
+	color: blue;
 }

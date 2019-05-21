@@ -7,6 +7,7 @@ require_once 'server/controller/API.php';
 require_once 'server/model/user.php';
 require_once 'server/model/myProfile.php';
 require_once 'server/model/profile.php';
+require_once 'server/model/message.php';
 
 session_start();
 $_SESSION['id'] = 1;

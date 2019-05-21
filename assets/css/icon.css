@@ -35,6 +35,8 @@
     padding: 15px 25px;
     margin-top: 15px;
     font-family: Verdana;
+    width: 75%;
+    font-size: 0.9rem;
 }
 
 .sended {

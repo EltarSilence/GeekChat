@@ -11,6 +11,8 @@
     <div class="pl-0 pr-0" id="chat">
       <div class="container-fluid">
         @yield('_chat')
+        {{{ $m = new Message() }}}
+        {{ $m->getHtml() }}
       </div>
       <div class="container-fluid pl-0 pr-0 border-top" id="messageBar">
         <div class="col-12 ml-1 mr-1">
@@ -27,6 +29,7 @@
 <link rel="stylesheet" href="assets/css/messageBar.css"/>
 <link rel="stylesheet" href="assets/css/emojii.css"/>
 <link rel="stylesheet" href="assets/css/profile.css"/>
+<link rel="stylesheet" href="assets/css/icon.css"/>
 @endcss
 
 @js

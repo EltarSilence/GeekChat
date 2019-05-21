@@ -6,6 +6,7 @@ require_once 'server/controller/Controller.php';
 require_once 'server/controller/API.php';
 require_once 'server/model/user.php';
 require_once 'server/model/myProfile.php';
+require_once 'server/model/profile.php';
 
 session_start();
 $_SESSION['id'] = 1;
@@ -52,6 +53,17 @@ ZRoute::post("/my_profile", function (){
     die();
   }
 });
+
+ZRoute::post("/show_profile", function ($data){
+  if(isset($data['id'])){
+    $p = new Profile(API::getProfile($data['id']));
+    echo $p->getHtml();
+  }else{
+    http_response_code(500);
+    die();
+  }
+});
+
 
 /*
   Chiamata per settare un nuovo username

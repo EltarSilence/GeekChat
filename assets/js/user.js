@@ -35,6 +35,7 @@ function ajax_updateOnlineStatus(){
 }
 function addAjax(){
   $('#users a').on('click', function(){
+    debugger;
     $.ajax({
       url : "show_profile",
       method : "POST",
@@ -42,7 +43,16 @@ function addAjax(){
         "id" : $(this).attr("data-id")
       },
       success : function(data){
+        debugger;
         $('#profile').html(data);
+        $('#profile').slideDown();
+        $('#backbutton').on('click', function(){
+          $('#profile').slideUp();
+          setTimeout(function(){
+            $('#profile').html("");
+          }, 800);
+
+        });
       },
       error : function(er){
         console.log(er);

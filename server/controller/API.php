@@ -64,13 +64,13 @@ class API{
       die();
     }
     $date = new DateTime('- 15 second');
-    $result = $mysqli->query("SELECT username, immagine, bio FROM utenti WHERE lastAccess >='".$date->format('Y-m-d H:i:s')."' ORDER BY username");
+    $result = $mysqli->query("SELECT id, username, immagine, bio FROM utenti WHERE lastAccess >='".$date->format('Y-m-d H:i:s')."' ORDER BY username");
     while($row = $result->fetch_assoc()){
       $row['online'] = true;
       $row['immagine'] = isset($row['immagine']) ? $row['immagine'] : "user.png";
       $j[] = $row;
     }
-    $result = $mysqli->query("SELECT username, immagine, bio FROM utenti WHERE lastAccess <'".$date->format('Y-m-d H:i:s')."' ORDER BY username");
+    $result = $mysqli->query("SELECT id, username, immagine, bio FROM utenti WHERE lastAccess <'".$date->format('Y-m-d H:i:s')."' ORDER BY username");
     while($row = $result->fetch_assoc()){
       $row['online'] = false;
       $row['immagine'] = isset($row['immagine']) ? $row['immagine'] : "user.png";

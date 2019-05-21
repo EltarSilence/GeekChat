@@ -17,6 +17,7 @@ body{
 #users{
   height: 100%;
   overflow-y: scroll;
+  background-color: #252830;
 }
 #users::-webkit-scrollbar {
   width: 5px;
@@ -30,6 +31,7 @@ body{
 }
 #chat{
   width: 70%;
+  background-color: #e6e6e6;
 }
 #messageBar{
   position: fixed;

@@ -1,30 +1,25 @@
 .messaggio {
   padding: 15px 25px;
-  margin-top: 15px;
+  margin-top: 10px;
   font-family: Verdana;
   width: 75%;
-  font-size: 0.9rem;
+  font-size: 0.8rem;
 }
 .sended {
-  background-color: rgba(14, 14, 123, 0.73);
-  border-radius: 20px 20px 0 20px;
-  box-shadow: 0 0 10px 0 #000000;
+  background-color: #05728f ;
+  border-radius: 4px 4px 4px 4px;
   float: right;
+  clip-path: polygon(0 0, 0 100%, 100% 100%, 98% 92%, 98% 0);
 }
 .received {
-  background-color: rgba(38, 38, 124, 0.41);
-  border-radius: 20px 20px 20px 0;
-  box-shadow: 0 0 10px 0 #95a5a6;
+  background-color: #ebebeb;
+  border-radius: 4px 4px 4px 4px;
   float: left;
-  //clip-path: polygon(2% 0%, 2% 92%, 0% 100%, 100% 100%, 100% 0%);
+  clip-path: polygon(2% 0%, 2% 92%, 0% 100%, 100% 100%, 100% 0%);
 }
 .messaggio:hover {
-  transition: 0.6s ease;
-  filter: brightness(110%);
-}
-.sender {
-  color: #9ACD32;
-  font-size: medium;
+  transition: 0.3s ease;
+  filter: brightness(105%);
 }
 .received .nome {
   color: black;
@@ -39,6 +34,8 @@
 }
 .sended .testo {
   color: white;
+  padding-right: 20px;
+
 }
 .imgbin {
   max-width: 30px;

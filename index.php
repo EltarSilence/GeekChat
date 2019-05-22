@@ -4,10 +4,10 @@ require_once 'Zexarel/loader.php';
 require_once 'server/view/AppView.php';
 require_once 'server/controller/Controller.php';
 require_once 'server/controller/API.php';
-require_once 'server/model/user.php';
-require_once 'server/model/myProfile.php';
-require_once 'server/model/profile.php';
-require_once 'server/model/message.php';
+require_once 'server/model/User.php';
+require_once 'server/model/MyProfile.php';
+require_once 'server/model/Profile.php';
+require_once 'server/model/Message.php';
 
 session_start();
 $_SESSION['id'] = 1;

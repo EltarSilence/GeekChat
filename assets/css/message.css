@@ -4,16 +4,15 @@
   font-family: Verdana;
   width: 75%;
   font-size: 0.8rem;
+  border-radius: 4px;
 }
 .sended {
   background-color: #05728f ;
-  border-radius: 4px 4px 4px 4px;
   float: right;
   clip-path: polygon(0 0, 0 100%, 100% 100%, 98% 92%, 98% 0);
 }
 .received {
-  background-color: #ebebeb;
-  border-radius: 4px 4px 4px 4px;
+  background-color: red;
   float: left;
   clip-path: polygon(2% 0%, 2% 92%, 0% 100%, 100% 100%, 100% 0%);
 }
@@ -35,7 +34,6 @@
 .sended .testo {
   color: white;
   padding-right: 20px;
-
 }
 .imgbin {
   max-width: 30px;

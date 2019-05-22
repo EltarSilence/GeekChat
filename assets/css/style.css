@@ -39,3 +39,6 @@ body{
   right: 0;
   width: 70%;
 }
+#editProfile{
+  cursor: pointer;
+}

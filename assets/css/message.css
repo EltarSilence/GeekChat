@@ -1,17 +1,18 @@
 .messaggio {
-  padding: 15px 25px;
+  padding-top: 10px;
+  padding-left: 10px;
   margin-top: 10px;
   font-family: Verdana;
-  width: 75%;
+  width: 100%;
   font-size: 0.8rem;
 }
-.sended {
+.sended .messaggio{
   background-color: #05728f ;
   border-radius: 4px 4px 4px 4px;
   float: right;
   clip-path: polygon(0 0, 0 100%, 100% 100%, 98% 92%, 98% 0);
 }
-.received {
+.received .messaggio{
   background-color: #ebebeb;
   border-radius: 4px 4px 4px 4px;
   float: left;
@@ -30,12 +31,14 @@
 }
 .sended .nome {
   color: aqua;
-  font-size: medium;
+  padding-left: 15px;
+  //font-size: medium;
 }
 .sended .testo {
   color: white;
-  padding-right: 20px;
-
+  padding-left: 15px;
+  padding-right: 30px;
+  padding-bottom: 10px;
 }
 .imgbin {
   max-width: 30px;
@@ -50,4 +53,12 @@
   //max-width: 400px;
   //max-height: 400px;
   float: right;
+}
+
+@mixin clearfix() {
+&::after {
+  display: block;
+  content: "";
+  clear: both;
+}
 }

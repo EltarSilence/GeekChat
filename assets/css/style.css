@@ -39,3 +39,13 @@ body{
   right: 0;
   width: 70%;
 }
+.container-message.sended{
+  float: right;
+  position: relative;
+  max-width: 65%;
+}
+.sended .datehour{
+  float: right;
+  width: 100%;
+  font-size: 12px;
+}

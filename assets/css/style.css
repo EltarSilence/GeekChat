@@ -49,3 +49,6 @@ body{
   width: 100%;
   font-size: 12px;
 }
+#editProfile{
+  cursor: pointer;
+}

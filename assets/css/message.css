@@ -5,10 +5,10 @@
   font-family: Verdana;
   width: 100%;
   font-size: 0.8rem;
+  border-radius: 4px;
 }
 .sended .messaggio{
   background-color: #05728f ;
-  border-radius: 4px 4px 4px 4px;
   float: right;
   clip-path: polygon(0 0, 0 100%, 100% 100%, 98% 92%, 98% 0);
 }

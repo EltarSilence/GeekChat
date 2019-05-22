@@ -4,10 +4,10 @@ require_once 'Zexarel/loader.php';
 require_once 'server/view/AppView.php';
 require_once 'server/controller/Controller.php';
 require_once 'server/controller/API.php';
-require_once 'server/model/user.php';
-require_once 'server/model/myProfile.php';
-require_once 'server/model/profile.php';
-require_once 'server/model/message.php';
+require_once 'server/model/User.php';
+require_once 'server/model/MyProfile.php';
+require_once 'server/model/Profile.php';
+require_once 'server/model/Message.php';
 
 session_start();
 $_SESSION['id'] = 1;
@@ -20,10 +20,6 @@ ZRoute::get("/", function (){
 ZRoute::get("/chat", function (){
   AppView::get("chat");
 }, "chat");
-
-ZRoute::get("/test", function (){
-
-});
 
 /*           CHIAMATE AJAX            */
 ZRoute::post("/updateOnlineStatus", function(){
@@ -45,7 +41,7 @@ ZRoute::post("/getOnlineUser", function (){
   }
 });
 
-ZRoute::post("/my_profile", function (){
+ZRoute::post("/myProfile", function (){
   if(isset($_SESSION['id'])){
     $p = new MyProfile(API::getProfile($_SESSION['id']));
     echo $p->getHtml();
@@ -55,7 +51,7 @@ ZRoute::post("/my_profile", function (){
   }
 });
 
-ZRoute::post("/show_profile", function ($data){
+ZRoute::post("/showProfile", function ($data){
   if(isset($data['id'])){
     $p = new Profile(API::getProfile($data['id']));
     echo $p->getHtml();
@@ -64,6 +60,8 @@ ZRoute::post("/show_profile", function ($data){
     die();
   }
 });
+
+
 
 
 /*

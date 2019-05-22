@@ -35,15 +35,13 @@ function ajax_updateOnlineStatus(){
 }
 function addAjax(){
   $('#users a').on('click', function(){
-    debugger;
     $.ajax({
-      url : "show_profile",
+      url : "showProfile",
       method : "POST",
       data : {
         "id" : $(this).attr("data-id")
       },
       success : function(data){
-        debugger;
         $('#profile').html(data);
         $('#profile').slideDown();
         $('#backbutton').on('click', function(){

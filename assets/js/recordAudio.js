@@ -63,6 +63,9 @@ $(document).ready(function(){
     clearInterval(timer);
     gumStream.getAudioTracks()[0].stop();
     rec.exportWAV(createDownloadLink);
+
+    content = 'audio';
+    setContent('audio');
   }
 
   function createDownloadLink(blob) {

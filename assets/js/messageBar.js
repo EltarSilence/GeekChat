@@ -1,3 +1,4 @@
+var content = null;
 $(document).ready(function(){
   $("#coll").click(function(){
     if ($('#row2').is(":visible")){
@@ -22,4 +23,25 @@ $(document).ready(function(){
     }
   });
 
+  $("#addLink").click(function(){
+    if ($('#row4').is(":visible")){
+      $("#row4").slideUp(400);
+    }else{
+      $("#row4").slideDown(400);
+    }
+  });
+  $('#link').on('change', function(){
+    setContent('link');
+  });
+
+
+
 });
+
+function setContent(type){
+  content = type;
+
+  
+
+
+}

@@ -37,7 +37,7 @@ function addAjax(){
   $('#users a').on('click', function(){
     debugger;
     $.ajax({
-      url : "show_profile",
+      url : "showProfile",
       method : "POST",
       data : {
         "id" : $(this).attr("data-id")

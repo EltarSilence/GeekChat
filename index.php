@@ -21,10 +21,6 @@ ZRoute::get("/chat", function (){
   AppView::get("chat");
 }, "chat");
 
-ZRoute::get("/test", function (){
-
-});
-
 /*           CHIAMATE AJAX            */
 ZRoute::post("/updateOnlineStatus", function(){
   if(isset($_SESSION['id'])){
@@ -45,7 +41,7 @@ ZRoute::post("/getOnlineUser", function (){
   }
 });
 
-ZRoute::post("/my_profile", function (){
+ZRoute::post("/myProfile", function (){
   if(isset($_SESSION['id'])){
     $p = new MyProfile(API::getProfile($_SESSION['id']));
     echo $p->getHtml();
@@ -55,7 +51,7 @@ ZRoute::post("/my_profile", function (){
   }
 });
 
-ZRoute::post("/show_profile", function ($data){
+ZRoute::post("/showProfile", function ($data){
   if(isset($data['id'])){
     $p = new Profile(API::getProfile($data['id']));
     echo $p->getHtml();
@@ -64,6 +60,8 @@ ZRoute::post("/show_profile", function ($data){
     die();
   }
 });
+
+
 
 
 /*

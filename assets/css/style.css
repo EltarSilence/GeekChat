@@ -38,6 +38,11 @@ body{
   bottom: 0;
   right: 0;
   width: calc(70% + 1px);
+<<<<<<< HEAD
+=======
+  background-color: #007bff!important;
+
+>>>>>>> 289eae510e671db8c4cda6cb12e169c11f1daebe
 }
 .container-message.sended{
   float: right;

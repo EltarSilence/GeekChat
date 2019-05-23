@@ -183,12 +183,13 @@ class API{
   public static function createContent($type, $data){
     switch($type){
       case 'link':
-
-        return new LinkContent(['url' => $data['data'], 'preview' => ""]);
-        break;
+        return new LinkContent(['url' => $data['data']]);
       case 'image':
+        return new ImageContent(['file' => sizeof($data['_FILES']['data']['name'])]);
 
-        break;
+
+
+
     }
 
   }

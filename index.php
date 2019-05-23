@@ -9,6 +9,7 @@ require_once 'server/model/MyProfile.php';
 require_once 'server/model/Profile.php';
 require_once 'server/model/Message.php';
 require_once 'server/model/LinkContent.php';
+require_once 'server/model/ImageContent.php';
 
 session_start();
 $_SESSION['id'] = 1;
@@ -65,7 +66,7 @@ ZRoute::post("/showProfile", function ($data){
 ZRoute::post("/getContent", function ($data){
   if(isset($data['type'])){
     $p = API::createContent($data['type'], $data);
-    //echo $p->getHtml();
+    echo $p->getHtml();
   }else{
     http_response_code(500);
     die();

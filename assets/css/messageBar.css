@@ -2,17 +2,20 @@
 	cursor: pointer;
 }
 
-.sendmsg {
-	height: 27px;
-}
-.send {
-	height: 100%;
-	font-size: 16;
+.send{
+	font-size: 1.2rem;
+	border-radius: 5px;
 	background-color: #d1d8e0;
+}
+#row1{
+	background-color: #007bff;
+}
+#sendMessage{
+	background-color: red;
 }
 
 #row2,
-#row3,
+#rowEmoji,
 #rowLink {
 	display: none;
 }

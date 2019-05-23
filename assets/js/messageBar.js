@@ -5,8 +5,8 @@ $(document).ready(function(){
       $(this).find('i').removeClass('fa-chevron-up');
       $(this).find('i').addClass('fa-chevron-down');
       $("#row2").slideUp(400);
-      if ($('#row3').is(":visible")){
-        $("#row3").slideUp(400);
+      if ($('#rowEmoji').is(":visible")){
+        $("#rowEmoji").slideUp(400);
       }
     }else{
       $(this).find('i').removeClass('fa-chevron-down');
@@ -15,17 +15,18 @@ $(document).ready(function(){
     }
   });
 
-  $("#coll2").click(function(){
+  $("#addEmoji").click(function(){
     $("#rowLink").slideUp(400);
-    if ($('#row3').is(":visible")){
-      $("#row3").slideUp(400);
+    if ($('#rowEmoji').is(":visible")){
+      $("#rowEmoji").slideUp(400);
     }else{
-      $("#row3").slideDown(400);
+      $("#rowEmoji").slideDown(400);
     }
   });
 
   $("#addImage").click(function(){
     $("#rowLink").slideUp(400);
+    $("#rowEmoji").slideUp(400);
     $('#image').click();
   });
   $('#image').on('change', function(e){
@@ -37,6 +38,7 @@ $(document).ready(function(){
   });
 
   $("#addLink").click(function(){
+    $("#rowEmoji").slideUp(400);
     if ($('#rowLink').is(":visible")){
       $("#rowLink").slideUp(400);
     }else{

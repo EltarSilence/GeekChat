@@ -37,7 +37,9 @@ body{
   position: fixed;
   bottom: 0;
   right: 0;
-  width: 70%;
+  width: calc(70% + 1px);
+  background-color: #007bff!important;
+
 }
 .container-message.sended{
   float: right;

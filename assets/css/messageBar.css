@@ -2,13 +2,11 @@
 	cursor: pointer;
 }
 
-.sendmsg {
-	height: 27px;
-}
 .send {
 	height: 100%;
 	font-size: 16;
 	background-color: #d1d8e0;
+	border-radius: 5px;
 }
 
 #row2,

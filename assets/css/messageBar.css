@@ -1,3 +1,7 @@
+#rowAllegati #cancel{
+	cursor: pointer;
+}
+
 .sendmsg {
 	height: 27px;
 }
@@ -9,7 +13,7 @@
 
 #row2,
 #row3,
-#row4 {
+#rowLink {
 	display: none;
 }
 #row2 > div{
@@ -54,5 +58,9 @@
 
 #timer{
 	font-size: 1rem;
+	display: none;
+}
+
+#image{
 	display: none;
 }

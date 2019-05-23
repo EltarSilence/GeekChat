@@ -16,11 +16,24 @@ $(document).ready(function(){
   });
 
   $("#coll2").click(function(){
+    $("#rowLink").slideUp(400);
     if ($('#row3').is(":visible")){
       $("#row3").slideUp(400);
     }else{
       $("#row3").slideDown(400);
     }
+  });
+
+  $("#addImage").click(function(){
+    $("#rowLink").slideUp(400);
+    $('#image').click();
+  });
+  $('#image').on('change', function(e){
+    var f = new FormData();
+    for (var i = 0; i < $(this)[0]['files'].length; i++) {
+      f.append('data[]', $(this)[0]['files'][i]);
+    }
+    setContent('image', f);
   });
 
   $("#addLink").click(function(){
@@ -30,29 +43,39 @@ $(document).ready(function(){
       $("#rowLink").slideDown(400);
     }
   });
-  $('#link').on('change', function(){
-    setContent('link', $('#link').val());
+  $('#link').on('keydown keyup', function(){
+    if($('#link').val() != ""){
+      var f = new FormData();
+      f.append('data', $('#link').val());
+      setContent('link', f);
+    }
   });
 
 
 
 });
 
+function removeContent(){
+  content = null;
+  $('#rowAllegati').html("");
+  $("#rowAllegati").slideUp(400);
+}
+
 function setContent(type, data){
+  data.append('type', type);
   $.ajax({
     url : "getContent",
     method : "POST",
-    data : {
-      type : type,
-      data : data
-    },
-    beforeSend: function(){
-
-    },
+    data : data,
+    processData: false,
+    contentType: false,
     success : function(data){
       debugger
+      $('#rowAllegati').html(data);
+      $("#rowAllegati #cancel").on('click', removeContent);
+      $("#rowAllegati").slideDown(400);
     },
-    error : function(){
+    error : function(er){
       debugger;
     }
   });

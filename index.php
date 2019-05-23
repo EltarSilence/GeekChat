@@ -63,9 +63,9 @@ ZRoute::post("/showProfile", function ($data){
 });
 
 ZRoute::post("/getContent", function ($data){
-  if(isset($data['type'], $data['data'])){
-    $p = API::createContent($data['type'], $data['data']);
-    echo $p->getHtml();
+  if(isset($data['type'])){
+    $p = API::createContent($data['type'], $data);
+    //echo $p->getHtml();
   }else{
     http_response_code(500);
     die();

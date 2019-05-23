@@ -184,11 +184,12 @@ class API{
     switch($type){
       case 'link':
 
-        return new LinkContent(['url' => $data, 'preview' => ""]);
+        return new LinkContent(['url' => $data['data'], 'preview' => ""]);
         break;
+      case 'image':
 
+        break;
     }
-
 
   }
 

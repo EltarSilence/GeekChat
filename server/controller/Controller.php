@@ -72,14 +72,20 @@ class Controller{
     $text = $data['text'];
     $idUser = $_SESSION['id'];
     $idReply = "null";
-    $data = date("Y-m-d H:i:s");
+    $date = date("Y-m-d H:i:s");
 
-    $ret = $DB->query("INSERT INTO messaggi(testo, dataOraInvio, idReply, idUtente) VALUES('".$text."', '".$data."', ".$idReply.", ".$idUser.")");
-    $ret = $DB->query("SELECT id FROM messaggi ORDER BY id DESC LIMIT 1");
-    $ret = $ret->fetch_assoc['id'];
+    $ret = $DB->query("INSERT INTO messaggi(testo, dataOraInvio, idReply, idUtente) VALUES('".$text."', '".$date."', ".$idReply.", ".$idUser.")");
+    $ret = $DB->query("SELECT id FROM messaggi ORDER BY id DESC");
+    $id = $ret->fetch_assoc()['id'];
 
     switch ($data['type']) {
+      case 'link':
+        $ret = $DB->query("INSERT INTO links(url, idMessaggio) VALUES('".$data['data']."', ".$id.")");
+        break;
+      case 'image':
       
+
+
     }
 
 

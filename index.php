@@ -8,8 +8,6 @@ require_once 'server/model/User.php';
 require_once 'server/model/MyProfile.php';
 require_once 'server/model/Profile.php';
 require_once 'server/model/Message.php';
-require_once 'server/model/LinkContent.php';
-require_once 'server/model/ImageContent.php';
 
 session_start();
 $_SESSION['id'] = 1;

@@ -31,10 +31,8 @@ $(document).ready(function(){
   });
   $('#image').on('change', function(e){
     var f = new FormData();
-    for (var i = 0; i < $(this)[0]['files'].length; i++) {
-      f.append('data[]', $(this)[0]['files'][i]);
-    }
-    setContent('image', f);
+    f.append('data[]', $(this)[0]['files'][0]);
+    content = type;
   });
 
   $("#addLink").click(function(){
@@ -61,9 +59,7 @@ $(document).ready(function(){
     f.append('type', content);
     switch (content){
       case 'image':
-        for (var i = 0; i < $(this)[0]['files'].length; i++) {
-          f.append('data[]', $(this)[0]['files'][i]);
-        }
+        f.append('data[]', $(this)[0]['files'][0]);
         break;
       case 'link':
         f.append('data', $('#link').val());
@@ -79,8 +75,6 @@ $(document).ready(function(){
       success : function(data){
         debugger
         $('#textMessage').html("");
-        $('#rowAllegati').html("");
-        $("#rowAllegati").slideUp(400);
       },
       error : function(er){
         debugger;
@@ -102,22 +96,5 @@ function removeContent(){
 }
 
 function setContent(type, data){
-  data.append('type', type);
-  $.ajax({
-    url : "getContent",
-    method : "POST",
-    data : data,
-    processData: false,
-    contentType: false,
-    success : function(data){
-      debugger
-      $('#rowAllegati').html(data);
-      $("#rowAllegati #cancel").on('click', removeContent);
-      $("#rowAllegati").slideDown(400);
-    },
-    error : function(er){
-      debugger;
-    }
-  });
-
+  content = type;
 }

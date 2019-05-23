@@ -180,6 +180,17 @@ class API{
     return $ret;
   }
 
+  public static function createContent($type, $data){
+    switch($type){
+      case 'link':
+
+        return new LinkContent(['url' => $data, 'preview' => ""]);
+        break;
+
+    }
+
+
+  }
 
 
 }

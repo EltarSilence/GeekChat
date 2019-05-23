@@ -24,24 +24,37 @@ $(document).ready(function(){
   });
 
   $("#addLink").click(function(){
-    if ($('#row4').is(":visible")){
-      $("#row4").slideUp(400);
+    if ($('#rowLink').is(":visible")){
+      $("#rowLink").slideUp(400);
     }else{
-      $("#row4").slideDown(400);
+      $("#rowLink").slideDown(400);
     }
   });
   $('#link').on('change', function(){
-    setContent('link');
+    setContent('link', $('#link').val());
   });
 
 
 
 });
 
-function setContent(type){
-  content = type;
+function setContent(type, data){
+  $.ajax({
+    url : "getContent",
+    method : "POST",
+    data : {
+      type : type,
+      data : data
+    },
+    beforeSend: function(){
 
-  
-
+    },
+    success : function(data){
+      debugger
+    },
+    error : function(){
+      debugger;
+    }
+  });
 
 }

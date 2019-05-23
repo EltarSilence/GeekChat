@@ -55,6 +55,44 @@ $(document).ready(function(){
 
 
 
+  $('#sendMessage').on('click', function(){
+    var f = new FormData();
+    f.append('text', $('#textMessage').html());
+    f.append('type', content);
+    switch (content){
+      case 'image':
+        for (var i = 0; i < $(this)[0]['files'].length; i++) {
+          f.append('data[]', $(this)[0]['files'][i]);
+        }
+        break;
+      case 'link':
+        f.append('data', $('#link').val());
+        break;
+
+    }
+    $.ajax({
+      url : "sendMessage",
+      method : "POST",
+      data : f,
+      processData: false,
+      contentType: false,
+      success : function(data){
+        debugger
+        $('#textMessage').html("");
+        $('#rowAllegati').html("");
+        $("#rowAllegati").slideUp(400);
+      },
+      error : function(er){
+        debugger;
+      }
+    });
+
+
+
+
+
+  });
+
 });
 
 function removeContent(){

@@ -59,6 +59,32 @@ class Controller{
     return boolval($ret);
   }
 
+  public static function send($data){
+    $DB = new mysqli(
+      ZConfig::config("DB_HOST", "localhost"),
+      ZConfig::config("DB_USER", "root"),
+      ZConfig::config("DB_PASSWORD", ""),
+      ZConfig::config("DB_DATABASE", "geekchat")
+    );
+    if($DB->connect_errno){
+      die();
+    }
+    $text = $data['text'];
+    $idUser = $_SESSION['id'];
+    $idReply = "null";
+    $data = date("Y-m-d H:i:s");
+
+    $ret = $DB->query("INSERT INTO messaggi(testo, dataOraInvio, idReply, idUtente) VALUES('".$text."', '".$data."', ".$idReply.", ".$idUser.")");
+    $ret = $DB->query("SELECT id FROM messaggi ORDER BY id DESC LIMIT 1");
+    $ret = $ret->fetch_assoc['id'];
+
+    switch ($data['type']) {
+      
+    }
+
+
+
+  }
 
 
 

@@ -73,6 +73,9 @@ ZRoute::post("/getContent", function ($data){
   }
 });
 
+ZRoute::post("/sendMessage", function ($data){
+  Controller::send($data);
+});
 
 /*
   Chiamata per settare un nuovo username

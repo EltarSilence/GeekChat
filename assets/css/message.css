@@ -1,18 +1,28 @@
+.container-message.sended{
+  float: right;
+  position: relative;
+  max-width: 65%;
+}
+.container-message.received{
+  float: left;
+  position: relative;
+  max-width: 65%;
+}
 .messaggio {
-  padding-top: 10px;
-  padding-left: 10px;
-  margin-top: 10px;
+  padding: 2%;
   font-family: Verdana;
   width: 100%;
   font-size: 0.8rem;
   border-radius: 4px;
 }
 .sended .messaggio{
+  padding-right: 4%;
   background-color: #05728f ;
   float: right;
   clip-path: polygon(0 0, 0 100%, 100% 100%, 98% 92%, 98% 0);
 }
 .received .messaggio{
+  padding-left: 4%;
   background-color: #ebebeb;
   border-radius: 4px 4px 4px 4px;
   float: left;
@@ -24,21 +34,21 @@
 }
 .received .nome {
   color: black;
-  font-size: medium;
+  margin: 0;
 }
 .received .testo {
   color: black;
+  padding: 1% 1% 0 1%;
+  margin: 0;
 }
 .sended .nome {
   color: aqua;
-  padding-left: 15px;
-  //font-size: medium;
+  margin: 0;
 }
 .sended .testo {
   color: white;
-  padding-left: 15px;
-  padding-right: 30px;
-  padding-bottom: 10px;
+  padding: 1% 1% 0 1%;
+  margin: 0;
 }
 .imgbin {
   max-width: 30px;
@@ -50,15 +60,23 @@
   filter: invert(100%);
 }
 .imgmess {
-  //max-width: 400px;
-  //max-height: 400px;
+  width: 60%;
+  margin: 0 20%;
   float: right;
+}
+.sended .datehour{
+  float: left;
+  font-size: 12px;
+}
+.received .datehour{
+  float: right;
+  font-size: 12px;
 }
 
 @mixin clearfix() {
-&::after {
-  display: block;
-  content: "";
-  clear: both;
-}
+  &::after {
+    display: block;
+    content: "";
+    clear: both;
+  }
 }

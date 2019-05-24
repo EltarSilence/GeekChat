@@ -22,14 +22,15 @@ GeekChat's a school project which we decided to develop in order to learn leastw
 - Administrators can make other users administrator or can expel members.
 - All messages will be recorded in a proper database, and the scripts will dynamically load the messages on the client. All messages can be sent in a file and then can be exported so that messages can be viewed offline as well.
 - Each user can upload an image to show on his profile, and add a brief descriptive text, with a total length not exceeding 256 characters. His profile will be visualized by the other users by pressing the pseudonym (username) of the desired user.
-- Once a user logs in he will be able to look for the users currently connected and the last access of users offline in realtime.
-- You can send different types of messages:
-	- Text message (including Emojii)
+- Once a user logs in he will be able to look for the users currently connected and the last access of users offline, all in realtime.
+- In the chat you can send different types of messages:
+	- Text message (including Emoji)
 	- Audio message
 	- Images
 	- Link
 	- Documents
+	- Geographic positions
+	- Polls
 
 ### Remarks
 - Website Colors: https://flatuicolors.com/palette/defo
-- Readme is a WIP

@@ -14,12 +14,13 @@
 .img-user{
   width: 60%;
   border-radius: 100%;
-  border: 1px solid #ccc;
-  box-shadow: 1px 1px 5px black;
+  background-color: white;
+  //border: 1px solid #ccc;
+  //box-shadow: 1px 1px 5px black;
 }
 .dot{
-  width: 20px;
-  height: 20px;
+  width: 15px;
+  height: 15px;
   text-align: center;
   border-radius: 100%;
   border: 1px solid #ccc;

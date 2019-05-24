@@ -1,21 +1,20 @@
 <nav class="navbar navbar-expand-lg user-nav navbar navbar-dark bg-primary" >
-  <img src="images/logo/definitivo.png" width="3%"> </img>
+  <div style="background:yellow;height:100%;width:30%;">
+  <img src="images/logo/definitivo.png" width="15%"> </img>
   <span class="navbar-brand mb-0 h1 ml-3">GeekChat</span>
-  <div class="row ml-0 mr-0 w-100">
-    <div class="col-10"></div>
-    <div class="col-2">
-      <ul class="navbar-nav ml-auto">
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            {{ $_SESSION['username'] }}
-          </a>
-          <div  class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" id="editProfile">Modifica profilo</a>
-            <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="logout">Logout</a>
-          </div>
-        </li>
-      </ul>
-    </div>
+  </div>
+  <div style="height:100%;width:70%;background-Color:#32465a;">
+    <ul class="navbar-nav ml-auto" style="flex-direction:row-reverse; padding-right:7%;font-size:larger;">
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          {{ $_SESSION['username'] }}
+        </a>
+        <div  class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" id="editProfile">Modifica profilo</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="logout">Logout</a>
+        </div>
+      </li>
+    </ul>
   </div>
 </nav>

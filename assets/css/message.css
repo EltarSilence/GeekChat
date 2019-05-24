@@ -1,11 +1,18 @@
-.container-message.sended{
-  float: right;
+#chat > div{
+  flex-direction: column;
+  display: flex;
+}
+.container-message{
   position: relative;
+  width: 100%;
+  margin-top: 1%;
+}
+.sended > div{
+  float: right;
   max-width: 65%;
 }
-.container-message.received{
+.received > div{
   float: left;
-  position: relative;
   max-width: 65%;
 }
 .messaggio {

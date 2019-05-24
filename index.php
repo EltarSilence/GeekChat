@@ -75,6 +75,14 @@ ZRoute::post("/sendMessage", function ($data){
   Controller::send($data);
 });
 
+ZRoute::post("/getMessage", function ($data){
+  $m = API::getMessageFrom($data['id']);
+  for($i = 0; $i < sizeof($m); $i++){
+    echo (new Message($m[$i]))->getHtml();
+  }
+});
+
+
 /*
   Chiamata per settare un nuovo username
   @input:

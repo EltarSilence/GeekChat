@@ -10,9 +10,6 @@
     </div>
     <div class="pl-0 pr-0" id="chat">
       <div class="container-fluid">
-        @yield('_chat')
-        {{{ $m = new Message() }}}
-        {{ $m->getHtml() }}
       </div>
       <div class="container-fluid pl-0 pr-0" id="messageBar">
         <div class="col-12">
@@ -39,4 +36,5 @@
 <script src="assets/js/profile.js" charset="utf-8"></script>
 <script src="https://cdn.rawgit.com/mattdiamond/Recorderjs/08e7abd9/dist/recorder.js"></script>
 <script src="assets/js/recordAudio.js" charset="utf-8"></script>
+<script src="assets/js/chat.js" charset="utf-8"></script>
 @endjs

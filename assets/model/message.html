@@ -1,16 +1,22 @@
-<div class="container-message sended" data-id="1">
-  <div class="messaggio">
-    <div class="row nome">
-      Alex Marchi
+@if($_SESSION['id'] == $idUtente)
+<div class="container-message sended" data-id="{{ $id }}">
+@else
+<div class="container-message received" data-id="{{ $id }}">
+@endif
+  <div>
+    <div class="messaggio">
+      <div class="row nome">
+        {{ $username }}
+      </div>
+      @if($content['type'] ==  'image')
+      <img class="imgmess" src="{{ $content['url'] }}" />
+      @endif
+      <div class="row testo">
+        {{ $testo }}
+      </div>
     </div>
-    <div classS>
-      <img class="imgmess" src="images/logo/prova1.svg" />
-    </div>
-    <div class="row testo">
-      Ciao a tutti. tutto bene ragazzi?
+    <div class="datehour">
+      {{ $dataOraInvio }}
     </div>
   </div>
-    <div class="datehour">
-      11:04 AM
-    </div>
 </div>

@@ -24,7 +24,7 @@
 }
 .sended .messaggio{
   padding-right: 4%;
-  background-color: #05728f ;
+  background-color:#32465a ;
   float: right;
   clip-path: polygon(0 0, 0 100%, 100% 100%, 98% 92%, 98% 0);
 }
@@ -34,10 +34,6 @@
   border-radius: 4px 4px 4px 4px;
   float: left;
   clip-path: polygon(2% 0%, 2% 92%, 0% 100%, 100% 100%, 100% 0%);
-}
-.messaggio:hover {
-  transition: 0.3s ease;
-  filter: brightness(105%);
 }
 .received .nome {
   color: black;
@@ -49,7 +45,7 @@
   margin: 0;
 }
 .sended .nome {
-  color: aqua;
+  color: yellow;
   margin: 0;
 }
 .sended .testo {

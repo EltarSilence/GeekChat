@@ -12,18 +12,17 @@
   align-items: center;
 }
 .img-user{
-  width: 60%;
+  width: 70%;
   border-radius: 100%;
   background-color: white;
-  //border: 1px solid #ccc;
-  //box-shadow: 1px 1px 5px black;
+  box-shadow: 1px 1px 20px 0px #0000006b;
 }
 .dot{
   width: 15px;
   height: 15px;
   text-align: center;
   border-radius: 100%;
-  border: 1px solid #ccc;
+  border: 1px solid #808080bd;
 }
 .dot-green {
   box-shadow: inset -1px 0px 10px 1px #88ff88;

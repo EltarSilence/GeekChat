@@ -98,7 +98,7 @@ class API{
     	LEFT JOIN posizioni AS mp ON mp.idMessaggio = m.id
     	LEFT JOIN links AS ml ON ml.idMessaggio = m.id
     	LEFT JOIN documenti AS md ON md.idMessaggio = m.id
-    WHERE m.id >= ".$id);
+    WHERE m.id > ".$id);
 
     $ret = [];
     while($row = $result->fetch_assoc()){
@@ -187,11 +187,7 @@ class API{
       case 'image':
         return new ImageContent(['file' => sizeof($data['_FILES']['data']['name'])]);
 
-
-
-
     }
-
   }
 
 

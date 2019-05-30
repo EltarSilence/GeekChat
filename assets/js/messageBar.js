@@ -72,9 +72,10 @@ $(document).ready(function(){
       data : f,
       processData: false,
       contentType: false,
-      success : function(data){
-        debugger
+      beforeSend: function(){
         $('#textMessage').html("");
+      },
+      success : function(data){
       },
       error : function(er){
         debugger;

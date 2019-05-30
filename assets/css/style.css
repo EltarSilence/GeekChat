@@ -33,6 +33,17 @@ body{
 #chat{
   width: 70%;
   background-color: #e6e6e6;
+  overflow-y: scroll;
+}
+#chat::-webkit-scrollbar {
+  width: 5px;
+}
+#chat::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 10px #3e3e3e;
+}
+#chat::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background: #555;
 }
 #messageBar{
   position: fixed;

@@ -15,7 +15,7 @@ session_start();
 ZRoute::get("/", function (){
   if (isset($_SESSION['id']))
     redirect("chat");
-  else 
+  else
     redirect("login");
 });
 
@@ -111,9 +111,12 @@ ZRoute::post("/sendMessage", function ($data){
 
 ZRoute::post("/getMessage", function ($data){
   $m = API::getMessageFrom($data['id']);
+  $r = [];
   for($i = 0; $i < sizeof($m); $i++){
-    echo (new Message($m[$i]))->getHtml();
+    $r[$m[$i]['id']] =(new Message($m[$i]))->getHtml();
   }
+  header('Content-type: apllication/json');
+  echo json_encode($r);
 });
 
 

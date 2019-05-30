@@ -7,11 +7,15 @@ $(document).ready(function(){
         id : $('#chat > div:first-child > div:last-child').attr('data-id') || 0
       },
       success: function(data){
-        $('#chat > div:first-child').append(data);
+        $.each(data, function(key, value){
+          if($('#chat > *[data-id = '+key+']').length == 0){
+            $('#chat > div:first-child').append(value);
+          }
+        });
       },
       error: function(er){
         console.log(er);
       }
     });
-  }, 1500);
+  }, 5000);
 });

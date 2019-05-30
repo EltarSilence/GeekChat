@@ -11,8 +11,6 @@ require_once 'server/model/Profile.php';
 require_once 'server/model/Message.php';
 
 session_start();
-$_SESSION['id'] = 1;
-$_SESSION['username'] = "Zexal0807";
 
 ZRoute::get("/", function (){
   redirect("chat");

@@ -22,7 +22,15 @@ $(document).ready(function(){
     });
   });
   function addSaveAjax(){
-
-
+	var formdata= new FormData();
+	formdata.append("immage", document.getElementById("inputimg").files[0]);
+	formdata.append("bio", document.getElementById("bio").innerHTML);
+	var req=new XMLHttpRequest();
+	req.open("POST","modifyprofile");
+	req.send(formdata);
   }
 });
+
+function modimg(){
+	document.getElementById("inputimg").click();
+}

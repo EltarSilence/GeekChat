@@ -1,15 +1,24 @@
-.sendmsg {
-	height: 27px;
+#rowAllegati #cancel{
+	cursor: pointer;
 }
-.send {
-	height: 100%;
-	font-size: 16;
+
+.send{
+	font-size: 1.2rem;
+	border-radius: 5px;
 	background-color: #d1d8e0;
+	border-radius: 5px;
+	color: black;
+}
+#row1{
+	background-color:#2c3e50;
+}
+#sendMessage{
+	background-color: yellow;
 }
 
 #row2,
-#row3,
-#row4 {
+#rowEmoji,
+#rowLink {
 	display: none;
 }
 #row2 > div{
@@ -54,5 +63,9 @@
 
 #timer{
 	font-size: 1rem;
+	display: none;
+}
+
+#image{
 	display: none;
 }

@@ -9,7 +9,6 @@ require_once 'server/model/User.php';
 require_once 'server/model/MyProfile.php';
 require_once 'server/model/Profile.php';
 require_once 'server/model/Message.php';
-require_once 'server/model/LinkContent.php';
 
 session_start();
 $_SESSION['id'] = 1;
@@ -86,12 +85,23 @@ ZRoute::post("/showProfile", function ($data){
 });
 
 ZRoute::post("/getContent", function ($data){
-  if(isset($data['type'], $data['data'])){
-    $p = API::createContent($data['type'], $data['data']);
+  if(isset($data['type'])){
+    $p = API::createContent($data['type'], $data);
     echo $p->getHtml();
   }else{
     http_response_code(500);
     die();
+  }
+});
+
+ZRoute::post("/sendMessage", function ($data){
+  Controller::send($data);
+});
+
+ZRoute::post("/getMessage", function ($data){
+  $m = API::getMessageFrom($data['id']);
+  for($i = 0; $i < sizeof($m); $i++){
+    echo (new Message($m[$i]))->getHtml();
   }
 });
 

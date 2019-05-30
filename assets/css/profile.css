@@ -2,7 +2,7 @@
 	display: none;
 }
 #bluediv {
-	background-color: #8582cc;
+	background-color: #32465a;
   box-shadow: inset -1px -6px 12px 0px #1d1d2d;
 	height: 100%
 }
@@ -12,7 +12,9 @@
 	text-shadow: 2px 1px black;
 }
 #profileimg {
-	margin-left: 20%;
+	display: flex;
+	margin: auto;
+	align-items: center;
 	width: 60%;
 	box-shadow: 1px 1px 16px 1px black;
 	background-color: white;

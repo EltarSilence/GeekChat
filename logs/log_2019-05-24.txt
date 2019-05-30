@@ -1,0 +1,28 @@
+[2019-05-24 08:46:18][ERROR] : Exception throw: syntax error, unexpected '}' at E:\EasyPHP-Devserver-17\eds-www\GeekChat\Zexarel\class\ZView\ZBladeCompiler.php(50) : eval()'d code on line 3
+	
+[2019-05-24 08:48:00][ERROR] : Exception throw: syntax error, unexpected '}' at E:\EasyPHP-Devserver-17\eds-www\GeekChat\Zexarel\class\ZView\ZBladeCompiler.php(50) : eval()'d code on line 4
+	
+[2019-05-24 08:49:44][ERROR] : Exception throw: syntax error, unexpected '}' at E:\EasyPHP-Devserver-17\eds-www\GeekChat\Zexarel\class\ZView\ZBladeCompiler.php(50) : eval()'d code on line 3
+	
+[2019-05-24 08:49:55][ERROR] : Exception throw: syntax error, unexpected '}' at E:\EasyPHP-Devserver-17\eds-www\GeekChat\Zexarel\class\ZView\ZBladeCompiler.php(50) : eval()'d code on line 3
+	
+[2019-05-24 08:50:49][ERROR] : Exception throw: syntax error, unexpected '}' at E:\EasyPHP-Devserver-17\eds-www\GeekChat\Zexarel\class\ZView\ZBladeCompiler.php(50) : eval()'d code on line 3
+	
+[2019-05-24 08:51:08][ERROR] : Exception throw: syntax error, unexpected '}' at E:\EasyPHP-Devserver-17\eds-www\GeekChat\Zexarel\class\ZView\ZBladeCompiler.php(50) : eval()'d code on line 3
+	
+[2019-05-24 08:52:38][ERROR] : Exception throw: syntax error, unexpected '}' at E:\EasyPHP-Devserver-17\eds-www\GeekChat\Zexarel\class\ZView\ZBladeCompiler.php(50) : eval()'d code on line 3
+	
+[2019-05-24 08:53:34][ERROR] : Exception throw: syntax error, unexpected '}' at E:\EasyPHP-Devserver-17\eds-www\GeekChat\Zexarel\class\ZView\ZBladeCompiler.php(51) : eval()'d code on line 3
+	
+[2019-05-24 08:53:59][ERROR] : Exception throw: syntax error, unexpected '}' at E:\EasyPHP-Devserver-17\eds-www\GeekChat\Zexarel\class\ZView\ZBladeCompiler.php(51) : eval()'d code on line 3
+	
+[2019-05-24 08:54:02][ERROR] : Exception throw: syntax error, unexpected '}' at E:\EasyPHP-Devserver-17\eds-www\GeekChat\Zexarel\class\ZView\ZBladeCompiler.php(51) : eval()'d code on line 3
+	
+[2019-05-24 08:54:29][ERROR] : Exception throw: syntax error, unexpected '}' at E:\EasyPHP-Devserver-17\eds-www\GeekChat\Zexarel\class\ZView\ZBladeCompiler.php(51) : eval()'d code on line 3
+	
+[2019-05-24 08:54:32][ERROR] : Exception throw: syntax error, unexpected '}' at E:\EasyPHP-Devserver-17\eds-www\GeekChat\Zexarel\class\ZView\ZBladeCompiler.php(51) : eval()'d code on line 3
+	
+[2019-05-24 08:55:21][ERROR] : Exception throw: syntax error, unexpected '}' at E:\EasyPHP-Devserver-17\eds-www\GeekChat\Zexarel\class\ZView\ZBladeCompiler.php(51) : eval()'d code on line 4
+	
+[2019-05-24 08:55:23][ERROR] : Exception throw: syntax error, unexpected '}' at E:\EasyPHP-Devserver-17\eds-www\GeekChat\Zexarel\class\ZView\ZBladeCompiler.php(51) : eval()'d code on line 4
+	

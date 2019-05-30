@@ -3,7 +3,7 @@ body{
 }
 .user-nav{
   height: 10%;
-  box-shadow: 0 1px 11px -6px #000000;
+  box-shadow: 0 1px 10px -6px #000000;
 }
 .user-nav nav{
   border-bottom: 1px solid black;
@@ -17,7 +17,8 @@ body{
 #users{
   height: 100%;
   overflow-y: scroll;
-  background-color: #252830;
+  background-color: #2c3e50;
+  box-shadow: 0 1px 10px -6px #000000;
 }
 #users::-webkit-scrollbar {
   width: 5px;
@@ -37,17 +38,7 @@ body{
   position: fixed;
   bottom: 0;
   right: 0;
-  width: 70%;
-}
-.container-message.sended{
-  float: right;
-  position: relative;
-  max-width: 65%;
-}
-.sended .datehour{
-  float: right;
-  width: 100%;
-  font-size: 12px;
+  width: calc(70% + 1px);
 }
 #editProfile{
   cursor: pointer;

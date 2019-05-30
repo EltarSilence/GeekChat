@@ -3,7 +3,7 @@
   margin: 1rem 0;
 }
 .user:hover{
-  background-color: #b7dbe8;
+  background-color: #ffff0026;
 }
 .content-center {
   flex-direction: column;
@@ -12,17 +12,17 @@
   align-items: center;
 }
 .img-user{
-  width: 60%;
+  width: 70%;
   border-radius: 100%;
-  border: 1px solid #ccc;
-  box-shadow: 1px 1px 5px black;
+  background-color: white;
+  box-shadow: 1px 1px 20px 0px #0000006b;
 }
 .dot{
-  width: 20px;
-  height: 20px;
+  width: 15px;
+  height: 15px;
   text-align: center;
   border-radius: 100%;
-  border: 1px solid #ccc;
+  border: 1px solid #808080bd;
 }
 .dot-green {
   box-shadow: inset -1px 0px 10px 1px #88ff88;

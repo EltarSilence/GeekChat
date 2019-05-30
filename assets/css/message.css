@@ -1,44 +1,57 @@
+#chat > div{
+  flex-direction: column;
+  display: flex;
+}
+.container-message{
+  position: relative;
+  width: 100%;
+  margin-top: 1%;
+}
+.sended > div{
+  float: right;
+  max-width: 65%;
+}
+.received > div{
+  float: left;
+  max-width: 65%;
+}
 .messaggio {
-  padding-top: 10px;
-  padding-left: 10px;
-  margin-top: 10px;
+  padding: 2%;
   font-family: Verdana;
   width: 100%;
   font-size: 0.8rem;
   border-radius: 4px;
 }
 .sended .messaggio{
-  background-color: #05728f ;
+  padding-right: 4%;
+  background-color:#32465a ;
   float: right;
   clip-path: polygon(0 0, 0 100%, 100% 100%, 98% 92%, 98% 0);
 }
 .received .messaggio{
+  padding-left: 4%;
   background-color: #ebebeb;
   border-radius: 4px 4px 4px 4px;
   float: left;
   clip-path: polygon(2% 0%, 2% 92%, 0% 100%, 100% 100%, 100% 0%);
 }
-.messaggio:hover {
-  transition: 0.3s ease;
-  filter: brightness(105%);
-}
 .received .nome {
   color: black;
-  font-size: medium;
+  margin: 0;
 }
 .received .testo {
   color: black;
+  padding: 1% 1% 0 1%;
+  margin: 0;
 }
 .sended .nome {
-  color: aqua;
-  padding-left: 15px;
-  //font-size: medium;
+  color: yellow;
+  margin: 0;
 }
 .sended .testo {
   color: white;
-  padding-left: 15px;
-  padding-right: 30px;
-  padding-bottom: 10px;
+  padding: 1% 1% 0 1%;
+  margin: 0;
 }
 .imgbin {
   max-width: 30px;
@@ -50,15 +63,25 @@
   filter: invert(100%);
 }
 .imgmess {
-  //max-width: 400px;
-  //max-height: 400px;
+  width: 60%;
+  margin: 0 20%;
   float: right;
+}
+.sended .datehour{
+  float: left;
+  font-size: 12px;
+  color: black;
+}
+.received .datehour{
+  float: right;
+  font-size: 12px;
+  color: black;
 }
 
 @mixin clearfix() {
-&::after {
-  display: block;
-  content: "";
-  clear: both;
-}
+  &::after {
+    display: block;
+    content: "";
+    clear: both;
+  }
 }

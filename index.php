@@ -13,7 +13,10 @@ require_once 'server/model/Message.php';
 session_start();
 
 ZRoute::get("/", function (){
-  redirect("chat");
+  if (isset($_SESSION['id']))
+    redirect("chat");
+  else 
+    redirect("login");
 });
 
 ZRoute::get("/chat", function (){
@@ -39,6 +42,16 @@ ZRoute::post("/registrazione", function ($data){
   //d_var_dump($data);
   registrazione($data['username'], $data['pw']);
 });
+
+ZRoute::get("/logout", function (){
+  $_SESSION['id']=null;
+  $_SESSION['username']=null;
+  $_SESSION['isAdmin']=null;
+  session_destroy();
+  redirect("login");
+}, "logout");
+
+
 
 
 

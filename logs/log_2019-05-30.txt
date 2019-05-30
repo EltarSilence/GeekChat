@@ -720,3 +720,17 @@
 	
 [2019-05-30 09:29:53][ERROR] : Exception throw: Call to a member function fetch_assoc() on boolean at C:\xampp\htdocs\GeekChat\server\controller\API.php on line 104
 	
+[2019-05-30 09:29:55][ERROR] : Exception throw: Call to a member function fetch_assoc() on boolean at C:\xampp\htdocs\GeekChat\server\controller\API.php on line 104
+	
+[2019-05-30 09:29:56][ERROR] : Exception throw: Call to a member function fetch_assoc() on boolean at C:\xampp\htdocs\GeekChat\server\controller\API.php on line 104
+	
+[2019-05-30 09:29:57][ERROR] : Exception throw: Call to a member function fetch_assoc() on boolean at C:\xampp\htdocs\GeekChat\server\controller\API.php on line 104
+	
+[2019-05-30 09:29:59][ERROR] : Exception throw: Call to a member function fetch_assoc() on boolean at C:\xampp\htdocs\GeekChat\server\controller\API.php on line 104
+	
+[2019-05-30 09:30:00][ERROR] : Exception throw: Call to a member function fetch_assoc() on boolean at C:\xampp\htdocs\GeekChat\server\controller\API.php on line 104
+	
+[2019-05-30 09:30:02][ERROR] : Exception throw: Call to a member function fetch_assoc() on boolean at C:\xampp\htdocs\GeekChat\server\controller\API.php on line 104
+	
+[2019-05-30 09:30:03][ERROR] : Exception throw: Call to a member function fetch_assoc() on boolean at C:\xampp\htdocs\GeekChat\server\controller\API.php on line 104
+	

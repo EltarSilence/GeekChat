@@ -9,11 +9,11 @@
 }
 .sended > div{
   float: right;
-  max-width: 65%;
+  max-width: 85%;
 }
 .received > div{
   float: left;
-  max-width: 65%;
+  max-width: 85%;
 }
 .messaggio {
   padding: 2%;
@@ -30,17 +30,17 @@
 }
 .received .messaggio{
   padding-left: 4%;
-  background-color: #ebebeb;
+  background-color: #32465ad9;
   border-radius: 4px 4px 4px 4px;
   float: left;
   clip-path: polygon(2% 0%, 2% 92%, 0% 100%, 100% 100%, 100% 0%);
 }
 .received .nome {
-  color: black;
+  color: yellow;
   margin: 0;
 }
 .received .testo {
-  color: black;
+  color: white;
   padding: 1% 1% 0 1%;
   margin: 0;
 }

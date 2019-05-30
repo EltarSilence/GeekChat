@@ -1,0 +1,68 @@
+@content
+<div class="container-fluid">
+  <div class="row" style="padding:1em">
+    <div class="col-5"></div>
+    <div class="col-2 card" style="text-align:center; background-color:white;">
+      <img src="images/logo/logo.png" style="padding:1em;">
+    </div>
+    <div class="col-5"></div>
+  </div>
+  <div class="row">
+    <div class="col-3"></div>
+    <div class="col-6" style="text-align:center">
+      <form style="padding:2em;" onsubmit="return CheckSignIn(this)" method="POST">
+        <div class="row">
+          <div class="col-2"></div>
+          <div class="col-8">
+            <div class="form-group">
+              <label for="exampleInputEmail1">Username</label>
+              <input type="text" name="username" class="form-control" id="exampleInputEmail1"
+                aria-describedby="emailHelp" placeholder="pippo">
+            </div>
+            <div class="form-group">
+              <label for="exampleInputPassword1">Password</label>
+              <input name="pw" type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+            </div>
+            <div class="form-group">
+              <label for="exampleInputPassword1">Conferma password</label>
+              <input name="checkPw" type="password" class="form-control" id="exampleInputPassword2"
+                placeholder="Password">
+            </div>
+            <div class="form-group form-check pl-0 pt-1">
+              <button type="submit" name="submit" class="btn btn-primary"
+                style="background-color:orangered; color:white; border-color:white;">Registrami</button>
+            </div>
+          </div>
+          <div class="col-2">
+            <p name="error" id="error" style="color:white;">
+              <?php
+                          if(isset($get)){
+                              echo 'Username non utilizzabile';
+                          }
+                      
+?>
+            </p>
+          </div>
+        </div>
+    </div>
+  </div>
+
+</div>
+</form>
+</div>
+<div class="col-3"></div>
+</div>
+</div>
+@endcontent
+
+@css
+<style>
+  body{
+    background-color:#ff7f50;
+  }
+</style>
+@endcss
+
+@js
+<script src="assets/js/registrazione.js" charset="utf-8" type="text/javascript"></script>
+@endjs

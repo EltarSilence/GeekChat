@@ -2,6 +2,7 @@
 require_once 'Zexarel/loader.php';
 
 require_once 'server/view/AppView.php';
+require_once 'server/view/LoginView.php';
 require_once 'server/controller/Controller.php';
 require_once 'server/controller/API.php';
 require_once 'server/model/User.php';
@@ -10,8 +11,6 @@ require_once 'server/model/Profile.php';
 require_once 'server/model/Message.php';
 
 session_start();
-$_SESSION['id'] = 1;
-$_SESSION['username'] = "Zexal0807";
 
 ZRoute::get("/", function (){
   redirect("chat");
@@ -20,6 +19,28 @@ ZRoute::get("/", function (){
 ZRoute::get("/chat", function (){
   AppView::get("chat");
 }, "chat");
+
+ZRoute::get("/login", function (){
+  LoginView::get("login");
+}, "login");
+
+ZRoute::post("/login", function ($data){
+  include "/assets/php/functions.php";
+  //d_var_dump($data);
+  login($data['username'], $data['password']);
+});
+
+ZRoute::get("/registrazione", function ($data){
+  LoginView::get("registrazione", ["get" => $data]);
+}, "registrazione");
+
+ZRoute::post("/registrazione", function ($data){
+  include "/assets/php/functions.php";
+  //d_var_dump($data);
+  registrazione($data['username'], $data['pw']);
+});
+
+
 
 /*           CHIAMATE AJAX            */
 ZRoute::post("/updateOnlineStatus", function(){

@@ -1,0 +1,49 @@
+@content
+<div class="container-fluid">
+  <div class="row" style="padding:1em">
+      <div class="col-5"></div>
+      <div class="col-2 card" style="width: 20em; text-align:center; background-color:white;">
+          <img src="images/logo/logo.png" style="padding:1em">
+      </div>
+      <div class="col-5"></div>
+  </div>
+  <div class="row">
+      <div class="col-3"></div>
+      <div class="col-6" style="text-align:center">
+          <form style="padding:2em" onsubmit="return CheckLogIn(this)" method="POST">
+              <div class="form-group" >
+                <label for="exampleInputEmail1">Username</label>
+                <input type="text" name="username" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="pippo">
+              </div>
+              <div class="form-group">
+                <label for="exampleInputPassword1">Password</label>
+                <input type="password" name="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+              </div>
+              <div class="form-group form-check">
+              </div>
+              <button type="submit" name="name" class="btn btn-primary" style="background-color:orangered; color:white; border-color:white;" name="submit">Accedi</button>
+            </form>
+            <div class="row">
+              <div class="col-12" style="text-align:center;">
+                  <p id="error" name="error" style="color:white;"></p>
+                  <small><a href="registrazione" style="color:white;">Registrati</a></small>
+              </div>
+            </div>
+            
+      </div>
+      <div class="col-3"></div>
+  </div>
+</div>
+@endcontent
+
+@css
+<style>
+body{
+  background-color:#ff7f50;
+}
+</style>
+@endcss
+
+@js
+<script src="assets/js/login.js" charset="utf-8" type="text/javascript"></script>
+@endjs

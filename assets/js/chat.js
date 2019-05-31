@@ -12,10 +12,17 @@ $(document).ready(function(){
             $('#chat > div:first-child').append(value);
           }
         });
+        scrollToBottom();
       },
       error: function(er){
         console.log(er);
       }
     });
   }, 5000);
+
+  function scrollToBottom(){
+    document.querySelector("#chat").scrollTo(0, 1000000);
+  }
+
+
 });

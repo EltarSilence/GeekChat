@@ -34,11 +34,7 @@ body{
   width: 70%;
   background-color: #e6e6e6;
   overflow-y: scroll;
-<<<<<<< HEAD
   height: 95%;
-=======
-  height: 90%;
->>>>>>> 3600c096a95242b5f9220efa9e07ddcb857a0667
   padding-bottom: 2%;
 }
 #chat::-webkit-scrollbar {

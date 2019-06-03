@@ -119,41 +119,37 @@ ZRoute::post("/getMessage", function ($data){
   echo json_encode($r);
 });
 
-
-/*
-  Chiamata per settare un nuovo username
-  @input:
-    username  ->  Nuovo username
-*/
-ZRoute::post("/edit_username", function($data){
-  if(isset($data['username'], $_SESSION['id'])){
-    if(Controller::editUsername($_SESSION['id'], $data['username'])){
+ZRoute::post("/modifyProfile", function($data){
+  if(isset($data['bio'], $_SESSION['id'])){
+    if(Controller::editDescrizione($_SESSION['id'], $data['bio'])){
+    }else{
+      http_response_code(500);
       die();
     }
-    http_response_code(500);
-    die();
   }
-  http_response_code(500);
-  die();
-});
-
-/*
-  Chiamata per settare un nuova descrizione
-  @input:
-    desc  ->  Nuova descrizione
-*/
-ZRoute::post("/edit_descrizione", function($data){
-  if(isset($data['desc'], $_SESSION['id'])){
-    if(Controller::editDescrizione($_SESSION['id'], $data['desc'])){
+  if(isset($data['_FILES']['image']['name'])){
+    $n = "images/profile/". date("Ymdhis")."z.".strtolower(end(explode('.',$data['_FILES']['image']['name'])));
+    if(move_uploaded_file($data['_FILES']["image"]["tmp_name"], $n)){
+      $m = new mysqli(
+        ZConfig::config("DB_HOST", "localhost"),
+        ZConfig::config("DB_USER", "root"),
+        ZConfig::config("DB_PASSWORD", ""),
+        ZConfig::config("DB_DATABASE", "geekchat")
+      );
+      $sql = 'UPDATE utenti SET immagine="'.$n.'" WHERE id ='.$_SESSION['id'];
+      if($m->query($sql)){
+        die();
+      }else{
+        http_response_code(500);
+        die();
+      }
+    }else{
+      http_response_code(500);
       die();
     }
-    http_response_code(500);
-    die();
   }
-  http_response_code(500);
   die();
 });
-
 
 ZRoute::listen();
 

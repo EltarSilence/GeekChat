@@ -3,8 +3,8 @@
   <div class="col-12" id="username">
     <h3 class="top">{{ $username }}</h3>
   </div>
-  <img src="images/profile/{{ $immagine }}" class="rounded-circle col-12 pl-0 pr-0 mt-2 mb-2" id="profileimg" onclick="modimg()" data-toggle="tooltip" data-placement="bottom" title="modifica immagine">
-  <input type="file" name="immagine" id="inputimg">
+  <img src="{{ $immagine }}" class="rounded-circle col-12 pl-0 pr-0 mt-2 mb-2" id="profileimg" onclick="modimg()" data-toggle="tooltip" data-placement="bottom" title="modifica immagine">
+  <input type="file" name="immagine" id="inputimg" accept="image/*">
   <textarea maxlength="200" class="form-control col-12" id="bio">{{ $bio }}</textarea>
   <button type="submit" class="btn btn-primary mb-2 mt-2" id="safe">Salva</button>
 </div>

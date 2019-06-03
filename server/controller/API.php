@@ -27,7 +27,7 @@ class API{
         $j['username'] = $data['username'];
         $j['isAdmin'] = $data['isAdmin'];
         $j['bio'] = $data['bio'];
-        $j['immagine'] = isset($data['immagine']) ? $data['immagine'] : "user.png";
+        $j['immagine'] = isset($data['immagine']) ? $data['immagine'] : "images/profile/user.png";
         $j['lastAccess'] = $data['lastAccess'];
         $j['error'] = false;
       }
@@ -73,7 +73,7 @@ class API{
     $result = $mysqli->query("SELECT id, username, immagine, bio FROM utenti WHERE lastAccess <'".$date->format('Y-m-d H:i:s')."' ORDER BY username");
     while($row = $result->fetch_assoc()){
       $row['online'] = false;
-      $row['immagine'] = isset($row['immagine']) ? $row['immagine'] : "user.png";
+      $row['immagine'] = isset($row['immagine']) ? $row['immagine'] : "images/profile/user.png";
       $j[] = $row;
     }
     return $j;

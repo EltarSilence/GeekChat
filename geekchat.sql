@@ -86,6 +86,10 @@ CREATE TABLE `messaggi` (
   `idUtente` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+
+INSERT INTO messaggi (testo, dataOraInvio, idUtente) VALUES
+("Benvenuto nella nostra chat", "2019-06-06 10:00:00", 1)
+
 -- --------------------------------------------------------
 
 --
@@ -138,6 +142,15 @@ CREATE TABLE `utenti` (
   `password` varchar(30) NOT NULL,
   `lastAccess` datetime NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+INSERT INTO utenti(username, isAdmin, , bio, immagine, password, lastAccess) VALUES
+("Zexal0807", true, "I am Zexal", null, "1234", "2019-06-06 10:00:00"),
+("ElterSilence", true, "I am ElterSilence", null, "1234", "2019-06-06 10:00:00"),
+("Canippa69Player", true, "I am Canippa69Player", null, "1234", "2019-06-06 10:00:00"),
+("AlexMarchi2000", true, "I am AlexMarchi2000", null, "1234", "2019-06-06 10:00:00"),
+("Levico69Player", true, "I am Levico69Player", null, "1234", "2019-06-06 10:00:00"),
+("Lorenz1999", true, "I am Lorenz1999", null, "1234", "2019-06-06 10:00:00"),
+("Skil69", true, "I am Skil69", null, "1234", "2019-06-06 10:00:00")
 
 -- --------------------------------------------------------
 
